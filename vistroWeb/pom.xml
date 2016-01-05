@@ -7,30 +7,30 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>vistroWeb Maven Webapp</name>
-<!-- 	<url>http://maven.apache.org</url> -->
+	<!-- <url>http://maven.apache.org</url> -->
 
 	<properties>
 		<springframework.version>4.0.6.RELEASE</springframework.version>
 	</properties>
 
 	<dependencies>
-		
- 
-        <!-- Spring dependencies -->
-        <!-- http://mvnrepository.com/artifact/org.springframework/spring-core -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${springframework.version}</version>
-        </dependency>
- 
-        <!-- http://mvnrepository.com/artifact/org.springframework/spring-web -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${springframework.version}</version>
-        </dependency>
-        <dependency>
+
+
+		<!-- Spring dependencies -->
+		<!-- http://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+		<!-- http://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
@@ -58,21 +58,25 @@
 	<build>
 		<finalName>vistroWeb</finalName>
 		<plugins>
-         
-            <!-- Config: Maven Tomcat Plugin -->
-            <!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <!-- Config: contextPath and Port (Default - /HelloSpringMVC : 8080) -->
-                
-                <configuration>
-                    <path>/</path>
-                    <port>8899</port>
-                </configuration>
-                  
-            </plugin>
-        </plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+			
+			<!-- Config: Maven Tomcat Plugin -->
+			<!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<!-- Config: contextPath and Port (Default - /HelloSpringMVC : 8080) -->
+
+				<configuration>
+					<path>/</path>
+					<port>8899</port>
+				</configuration>
+
+			</plugin>
+		</plugins>
 	</build>
 </project>
