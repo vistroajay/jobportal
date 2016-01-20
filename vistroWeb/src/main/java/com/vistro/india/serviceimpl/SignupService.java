@@ -18,10 +18,6 @@ import com.vistro.india.service.ISignupService;
 public class SignupService implements ISignupService {
 @Autowired
 private	IDBSignupDao dbSignupDao;
-	public SignupService()
-	{     
-		
-	}
 
 /*	public SignupService(IDBSignupDao idbSignupDao) {
 		this.idbSignupDao = idbSignupDao;

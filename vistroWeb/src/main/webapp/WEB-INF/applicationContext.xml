@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/student" />
 		<property name="username" value="root" />
@@ -14,14 +14,14 @@
 	</bean>
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-		<constructor-arg ref="datasource"></constructor-arg>
+		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
 
 
-	<bean id="dbSignupDao" class="com.vistro.daoimpl.DBSignupDao">
+	<!-- <bean id="dbSignupDao" class="com.vistro.daoimpl.DBSignupDao">
 		<constructor-arg ref="jdbcTemplate"></constructor-arg>
-	</bean>
+	</bean> -->
 
 
 

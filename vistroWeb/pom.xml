@@ -40,7 +40,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${springframework.version}</version>
-			<scope>compile</scope>
 		</dependency>
 		<!-- Spring dependencies -->
 		<!-- http://mvnrepository.com/artifact/org.springframework/spring-core -->
