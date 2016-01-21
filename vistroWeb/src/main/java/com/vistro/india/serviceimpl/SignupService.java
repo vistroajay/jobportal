@@ -22,11 +22,11 @@ private	IDBSignupDao dbSignupDao;
 /*	public SignupService(IDBSignupDao idbSignupDao) {
 		this.idbSignupDao = idbSignupDao;
 	}*/
-	public int userRegistration(Command command){
-		SignupBo signupBO=null;
+	public int userRegistration(SignupBo signupBo){
+		/*SignupBo signupBO=null;
 		
-		signupBO=new SignupBo();
-		int b= dbSignupDao.insert(signupBO);
+		signupBO=new SignupBo();*/
+		int b= dbSignupDao.insert(signupBo);
 		if(b>0){
 			return 1;
 		}

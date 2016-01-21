@@ -21,7 +21,7 @@ public class DBSignupDao implements IDBSignupDao {
 				SignupSqlConstants.INSERT_INTO_SIGNUPTABLE,
 				new Object[] { signupBO.getFirstname(), signupBO.getLastname(),
 						signupBO.getPassword(), signupBO.getEmail(),
-						signupBO.getConpassword(), signupBO.getMobno() });
+						 signupBO.getMobno() });
 	}
 
 }

@@ -1,18 +1,4 @@
 
-/*!
- * Default theme for Pingendo 
- * Homepage: http://pingendo.com  
- * Copyright 2015 Pingendo 
- * Licensed under MIT 
- * Based on Bootstrap v3.3.4
-*/
-/* Add custom CSS classes here 
- * 
- * img {
- *   box-shadow : 0px 0px 10px black !important;
- * }
-*/
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -248,6 +234,7 @@ th {
   }
   .navbar {
     display: none;
+    background-color: transparent;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -1089,7 +1076,7 @@ html {
 body {
   font-family: Lato;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.42857142;
   color: #000000;
   background-color: #ffffff;
 }
@@ -1114,6 +1101,7 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+
 }
 figure {
   margin: 0;
@@ -1302,6 +1290,15 @@ p {
   line-height: 1.4;
 }
 @media (min-width: 768px) {
+
+
+  .dropdown-widths
+  {
+    width: 14em;
+    padding-left:-10px;
+  }
+
+
   .lead {
     font-size: 21px;
   }
@@ -1460,6 +1457,12 @@ dd {
   .dl-horizontal dd {
     margin-left: 180px;
   }
+
+  .dropdown-widths
+  {
+    width: 14em;
+    padding-left:-10px;
+  }
 }
 abbr[title],
 abbr[data-original-title] {
@@ -1585,15 +1588,31 @@ pre code {
   .container {
     width: 750px;
   }
+
+  .dropdown-widths
+  {
+    width: 14em;
+  }
 }
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+
+  .dropdown-widths
+  {
+    width: 14em;
+    padding-left:-10px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+
+  .dropdown-widths
+  {
+    width: 18em;
   }
 }
 .container-fluid {
@@ -2438,6 +2457,13 @@ table th[class*="col-"] {
   min-height: 0.01%;
 }
 @media screen and (max-width: 767px) {
+
+  .dropdown-widths
+  {
+    width: 15em;
+  }
+
+
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
@@ -2551,7 +2577,7 @@ output {
   color: #555555;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 1px solid  #1E90FF;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2764,7 +2790,7 @@ select[multiple].form-group-lg .form-control {
 }
 .form-group-lg .form-control-static {
   height: 46px;
-  padding: 10px 16px;
+  padding: -10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   min-height: 38px;
@@ -3501,7 +3527,7 @@ tbody.collapse.in {
   right: 0;
 }
 .dropdown-menu-left {
-  left: 0;
+  padding-left:-10px;
   right: auto;
 }
 .dropdown-header {
@@ -3932,8 +3958,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color:  #59B9F0;
+  border: 1px solid #0F9CED;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -4116,6 +4142,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-height: 340px;
 }
 @media (max-device-width: 480px) and (orientation: landscape) {
+  .dropdown-widths
+  {
+    width: 18em;
+  }
+
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
@@ -4228,6 +4259,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 }
 @media (max-width: 767px) {
+  .dropdown-widths
+  {
+    width: 20em;
+  }
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4411,7 +4446,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a {
   color: #000000;
-  background-color: #E7E7E7;
+  background-color: transparent;
 
 }
 .navbar-default .navbar-nav > li > a:hover,
@@ -4423,7 +4458,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #000000;
-  background-color: #e7e7e7;
+  background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -6876,7 +6911,7 @@ h4 {
 
 .registration-align
 {
-margin-top: 10px;
+margin: 0px auto;
 }
 .registration-submit
 {
@@ -6950,3 +6985,143 @@ margin-top: 10px;
 .footer-end-align{
  margin-left: 10%;
 }
+.news-textposition
+{
+  text-align: center;
+  padding-top: 10px;
+}
+.advancesearch
+ {
+   color: #172C2A;
+   background-color: transparent;
+   border-color: transparent;
+ }
+.advancesearch:hover
+{
+  color: #172C2A;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#pers{
+  padding: 5px;
+  text-align: center;
+  background-color: #E0E8F0;
+  border: solid 1px #c3c3c3;
+}
+
+#pers1{
+  padding: 50px;
+  display: none;
+}
+#edu{
+  padding: 5px;
+  text-align: center;
+  background-color: #E0E8F0;
+  border: solid 1px #c3c3c3;
+}
+
+#edu1{
+  padding: 50px;
+  display: none;
+}
+#exp{
+  padding: 5px;
+  text-align: center;
+  background-color: #E0E8F0;
+  border: solid 1px #c3c3c3;
+}
+
+#exp1{
+  padding: 50px;
+  display: none;
+}
+#cert{
+  padding: 5px;
+  text-align: center;
+  background-color: #DCDCDC;
+  border: solid 1px #c3c3c3;
+}
+
+#cert1{
+  padding: 50px;
+  display: none;
+}
+#res{
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#res1{
+  padding: 50px;
+  display: none;
+}
+#od{
+  padding: 5px;
+  text-align: center;
+  background-color: #E0E8F0;
+  border: solid 1px #c3c3c3;
+}
+
+#od1{
+  padding: 50px;
+  display: none;
+}
+/*Error Messge color*/
+.error-message{
+  color:red;
+}
+
+
+/*
+
+.dropdown-widths
+{
+width: 15em;
+}
+*/
+
+.dropdown-widths {
+  width: 14em;
+  margin-left:-10px;
+  border-color:  #1E90FF;
+
+}
+.dropdown1-widths{
+  margin-left: -10px;
+}
+
+.radioinput{
+  color: green;
+  background-color: #1E90FF;
+}
+/*Advanced Search**/
+.dropdown2-widths{
+  border-color:  #1E90FF;
+  width: 14em;
+  margin-left:3px;
+  padding-bottom:10px;
+}
+.dropdown3-widths{
+  margin-left:4px;
+  width: 14em;
+  padding-bottom:10px;
+  border-color:  #1E90FF;
+}
+.dropdown4-widths{
+  width: 14em;
+  margin-left:3px;
+  margin-left:4px;
+  border-color:  #1E90FF;
+}
+
+.advancesearch-dropdown-alignment{
+  padding-top:10px;
+  margin-left:-70px;
+  border-color:  #1E90FF;
+}
+
+
+

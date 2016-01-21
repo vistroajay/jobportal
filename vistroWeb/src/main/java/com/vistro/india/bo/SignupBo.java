@@ -5,7 +5,6 @@ public class SignupBo {
 	private String lastname;
 	private String email;
 	private String password;
-	private String conpassword;
 	private int mobno;
 	public String getFirstname() {
 		return firstname;
@@ -30,12 +29,6 @@ public class SignupBo {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getConpassword() {
-		return conpassword;
-	}
-	public void setConpassword(String conpassword) {
-		this.conpassword = conpassword;
 	}
 	public int getMobno() {
 		return mobno;

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.vistro.command.Command;
+import com.vistro.india.bo.SignupBo;
 import com.vistro.india.service.ISignupService;
 
 
@@ -24,19 +25,19 @@ public class SignupController {
 		this.iSignupService = iSignupService;
 	}
 	*/
-	@RequestMapping(value="/",method = RequestMethod.GET)
+	/*@RequestMapping(value="/",method = RequestMethod.GET)
 	public String getData() {
 
 	
 		return "hello";
 
-	}
-	@RequestMapping(value="/login",method = RequestMethod.POST)
+	}*/
+	@RequestMapping(value="/signup",method = RequestMethod.POST)
 	public String SignupProcess(
-			@ModelAttribute Command command ,ModelMap map) {
+			@ModelAttribute SignupBo command ,ModelMap map) {
 		System.out.println(command.getFirstname());
 		signupService.userRegistration(command);
-		//map.addAttribute(signupCommand);
-		return "hello";
+		map.addAttribute(command);
+		return "success";
 	}
 }
