@@ -1,4 +1,4 @@
-package com.vistro.india.controller;
+package com.vistro.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.vistro.india.bo.LoginBo;
-import com.vistro.india.service.ISigninService;
+import com.vistro.service.ILoginService;
+import com.vistro.vo.LoginVO;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
 	@Autowired
-	ISigninService signinService;
+	ILoginService signinService;
 
 	/*@RequestMapping(value="/",method = RequestMethod.GET)
 	public ModelAndView getData() {
@@ -24,7 +24,7 @@ public class LoginController {
 
 	}*/
 	@RequestMapping(value="/signin",method=RequestMethod.POST)
-	public ModelAndView loginProcess(@ModelAttribute LoginBo loginBo){
+	public ModelAndView loginProcess(@ModelAttribute LoginVO loginBo){
 		int loginProcess;
 		loginProcess=signinService.checkUserName_pswd(loginBo);
 		if(loginProcess==1){

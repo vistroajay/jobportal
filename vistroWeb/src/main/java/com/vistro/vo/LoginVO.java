@@ -1,6 +1,6 @@
-package com.vistro.india.bo;
+package com.vistro.vo;
 
-public class LoginBo {
+public class LoginVO {
 	private String email;
 	private String password;
 	public String getEmail() {
