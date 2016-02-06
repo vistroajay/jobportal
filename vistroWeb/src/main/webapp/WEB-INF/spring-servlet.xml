@@ -21,6 +21,8 @@
 
 	<mvc:resources mapping="resources/**" location="resources/" />
 	<mvc:resources mapping="login/resources/**" location="resources/" />
+	<mvc:resources mapping="jobs/resources/**" location="resources/" />
+	<mvc:resources mapping="profile/resources/**" location="resources/" />
 
 
 </beans>

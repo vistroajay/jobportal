@@ -1,3 +1,6 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +37,51 @@
 	<link rel="stylesheet" href="resources/css/jslider.css" type="text/css">
 	<link rel="stylesheet" href="resources/css/jslider.round.css" type="text/css">
 	<!-- Form Slider -->
-  </head><body>
+	<style>
+		.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 20%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.menu1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.gr-width {
+	width:200px;
+}
+.menu1 ul {
+    padding: 8px;
+    margin-bottom: 7px;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu1 ul:hover {
+    background-color: #0099cc;
+}
+body {
+ background-color: #E6E6FA;
+}
+</style>
+  </head>
+  <body>
 	<div id="wrapper"><!-- start main wrapper -->
 		<div id="header"><!-- start main header -->
 			<div class="top-line">&nbsp;</div>
@@ -50,8 +97,7 @@
 						</ul>
 						<ul class="media-top-2 clearfix">
 							<li><a href="" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
-							<li><input type="button" value="LOGIN" name="CreateCourse" class="btn btn-default btn-green btn-sm"
-onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
+							<li><a href="" class="btn btn-default btn-green btn-sm" >LOG IN</a></li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
@@ -60,15 +106,15 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 			<div class="container"><!-- container -->
 				<div class="row">
 					<div class="col-md-4"><!-- logo -->
-						<a href="index.jsp" title="Job Board" rel="home">
-							<img class="main-logo" src="resources/images/Vistro logo.jpg1.jpg" alt="job board" />
+						<a href="index.html" title="Job Board" rel="home">
+							<img class="main-logo" src="images/Vistro.jpg" alt="job board" />
 						</a>
 					</div><!-- logo -->
 					<div class="col-md-8 main-nav"><!-- Main Navigation -->
 						<a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
 						<nav>
 							<ul class="menu">
-								<li><a href="index.jsp">HOME</a>
+								<li><a href="index.html">HOME</a>
 									<ul class="sub-menu">
 										<li><a href="about.html">About Page</a></li>
 										<li><a href="blog.html">Blog Page</a></li>
@@ -108,47 +154,213 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 					<div class="item-slide">
 						<img src="resources/images/Image2.jpg" class="img-responsive" alt="dummy-slide" />
 					</div>
+
+					
 				</div>
 			</div><!-- end main-headline section -->
 
-		
-<!-- 			<div class="headline container">start headline section -->
-<!-- 					<div class="row" > -->
-<!-- 						<div class="col-md-6 align-right"> -->
-<!-- 							<h4>Easiest Way To Find Your Dream Job</h4> -->
-<!-- 							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</p> -->
-<!-- 							<p><a href="" class="btn btn-default btn-yellow">Find a Job</a></p> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-md-6 align-left"> -->
-<!-- 							<h4>Hire Skilled People, best of them</h4> -->
-<!-- 							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</p> -->
-<!-- 							<p><a href="" class="btn btn-default btn-light" >Post a Job</a></p> -->
-<!-- 						</div> -->
-<!-- 						<div class="clearfix"></div> -->
-<!-- 					</div> -->
-<!-- 			</div>end headline section -->
-	
-		<div class="job-finder"><!-- start job finder -->
-			<div class="container">
-				<h3>Find a Job</h3>
-				<form>
+			<div class="headline container"><!-- start headline section -->
+<form name="form" id="form" class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/jobsearch">
+				<table><tr>
+
 					<div class="col-md-5 form-group group-1">
 						<label for="searchjob" class="label">Search</label>
-						<input type="text" id="searchjob" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
+						<input type="text" id="SkillName" name="SkillName" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
 					</div>
-					<div class="col-md-5 form-group group-2">
+					<div class="col-md-3 form-group group-2">
 						<label for="searchplace" class="label">Location</label>
-						<input type="text" id="searchplace" class="input-location" placeholder="New York, Hong Kong, New Delhi, Berlin etc.">
+						<input type="text" id="LocationName" name="LocationName" class="input-location" placeholder="New York, Hong Kong, New Delhi, Berlin etc.">
 					</div>
-				
-					
-					
-<!--   					<div class="button">				  -->
-					<button type="button" class="btn btn-default btn-green">search</button>
+<!-- 					<div class="col-md-2 form-group group-2"> -->
+<!-- 						<label for="Experience" class="label">Experience</label> -->
+<!-- 							<select id="experience" name="experience" class="input-experience"> -->
+<!-- 								<option>0</option> -->
+<!-- 								<option>1</option> -->
+<!-- 								<option>2</option> -->
+<!-- 								<option>3</option> -->
+<!-- 								<option>4</option> -->
+<!-- 							</select> -->
 <!-- 					</div> -->
+	
+					
+					<div class="col-md-1 form-group group-3">
+						<label for="Search" class="label"></label>
+                    <button type="submit" id="Search" class="active btn btn-info btn-lg">
+                        <i class="fa fa-search fa-fw"></i>Search</button></a>
+						</div>
+                    		
+							</tr></table>
 				</form>
-			</div>
-		</div><!-- end job finder -->
+
+			</div><!-- end headline section -->
+
+		
+		<div class="container-fluid modal fade" id="myModal" role="dialog">
+  <h1>Search Result</h1>
+  <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Login</h4>
+          </div>
+  <div class="row">
+	    <div class="col-sm-1"></div>
+    <div class="col-sm-2" style="background-color:lavender;">
+	<div>
+                <div>
+<button type="button" class="btn btn-info" style="width:150px" width="100%" data-toggle="collapse" data-target="#loco">Location</button>
+  <div id="loco" class="collapse">
+                         <input type="checkbox" name="loc1" id="loc1"><label for="loc1">Bangalore</label><br></input>
+                         <input type="checkbox" name="loc2" id="loc2"><label for="loc2">Mumbai</label><br></input>
+                         <input type="checkbox" name="loc3" id="loc3"><label for="loc3">Delhi</label><br></input>
+                         <input type="checkbox" name="loc4" id="loc4"><label for="loc4">Chennai</label><br></input>
+                         <input type="checkbox" name="loc5" id="loc5"><label for="loc5">Hyderabad</label><br></input>
+</div>
+
+						<button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#comp">Top Companies</button>
+  <div id="comp" class="collapse">
+                         <input type="checkbox" name="loc1" id="comp1"><label for="comp1">Bangalore</label><br></input>
+                         <input type="checkbox" name="loc2" id="comp2"><label for="comp2">Mumbai</label><br></input>
+                         <input type="checkbox" name="loc3" id="comp3"><label for="comp3">Delhi</label><br></input>
+                         <input type="checkbox" name="loc4" id="comp4"><label for="comp4">Chennai</label><br></input>
+                         <input type="checkbox" name="loc5" id="comp5"><label for="comp5">Hyderabad</label><br></input>
+</div>
+						 <button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#ind">Industry</button>
+  <div id="ind" class="collapse">
+						 <input type="checkbox" name="loc1" id="ind1"><label for="ind1">Amazon</label><br></input>
+                         <input type="checkbox" name="loc2" id="ind2"><label for="ind2">Tcs</label><br></input>
+                         <input type="checkbox" name="loc3" id="ind3"><label for="ind3">CTS</label><br></input>
+                         <input type="checkbox" name="loc4" id="ind4"><label for="ind4">Amadeous</label><br></input>
+                         <input type="checkbox" name="loc5" id="ind5"><label for="ind5">J.P Morghan</label><br></input>
+
+</div>
+						<button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#sal">Salary</button>
+  <div id="sal" class="collapse">
+						 <input type="checkbox" name="loc1" id="sal1"><label for="sal1">0-3lakhs</label><br></input>
+                         <input type="checkbox" name="loc2" id="sal2"><label for="sal2">3-6lakhs</label><br></input>
+                         <input type="checkbox" name="loc3" id="sal3"><label for="sal3">6-12lakhs</label><br></input>
+                         <input type="checkbox" name="loc4" id="sal4"><label for="sal4">12-18lakhs</label><br></input>
+                         <input type="checkbox" name="loc5" id="sal5"><label for="sal5">18-22lakhs</label><br></input>
+
+</div>
+						<button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#jt">Job Type</button>
+  <div id="jt" class="collapse">
+  						 <input type="checkbox" name="loc1" id="jt1"><label for="jt1">All jobs</label><br></input>
+                         <input type="checkbox" name="loc2" id="jt2"><label for="jt2">Engg</label><br></input>
+                         <input type="checkbox" name="loc3" id="jt3"><label for="jt3">Mba</label><br></input>
+                         <input type="checkbox" name="loc4" id="jt4"><label for="jt4">Govt</label><br></input>
+
+</div>			
+						<br>
+                </div>
+            </div>
+	
+	</div>
+    <div class="col-sm-6" style="background-color:white">
+		<div>
+                <div>
+                    <div class="row hvr">
+                        <div class="col-xs-12">
+<!--                             <div class="sidebar-content"> -->
+<!--                                 <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br> -->
+<!--                                 <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br> -->
+<!--                                 <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp; -->
+<!--                                 <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span> -->
+<!--                             </div> -->
+<!--                            <div class="demo1-content bg-alt"> -->
+<!--                                 <div class="row"> -->
+<!--                                     <div class="col-xs-12"> -->
+<!--                                         <div class="sidebar-content"> -->
+<!--                                              <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span> -->
+<!--                                         </div> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                              </div> -->
+ <c:forEach items="${jobsearch}" var="m"> 
+    
+         ${m.JobName}
+        ${m.JobDescription}
+         ${m.LocationName}
+         ${m.SkillName}
+
+      </c:forEach> 
+
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-content bg-alt">
+                    <div class="row hvr">
+                       <div class="col-xs-12">
+                            <div class="sidebar-content">
+                                <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br>
+                                <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br>
+                                <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp;
+                                <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span>
+                            </div>
+                            <div class="demo1-content bg-alt">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="sidebar-content">
+                                            <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-content bg-alt">
+                    <div class="row hvr">
+                        <div class="col-xs-12">
+                            <div class="sidebar-content">
+                                <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br>
+                                <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br>
+                                <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp;
+                                <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span>
+                            </div>
+                            <div class="demo1-content bg-alt">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="sidebar-content">
+                                            <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-content bg-alt">
+                    <div class="row hvr">
+                        <div class="col-xs-12">
+                            <div class="sidebar-content">
+                                <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br>
+                                <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br>
+                                <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp;
+                                <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span>
+                            </div>
+                            <div class="demo1-content bg-alt">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="sidebar-content">
+                                            <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+							 
+	</div>
+	</div>
+	</div>
+
+		
+
+
+		
+
+
 		<div class="recent-job"><!-- Start Recent Job -->
 			<div class="container">
 				<div class="row">
@@ -166,7 +378,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 								
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Store General Manager</h6>
@@ -187,7 +399,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Department Head</h6>
@@ -208,7 +420,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Marketing</h6>
@@ -229,7 +441,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>General Manager</h6>
@@ -250,7 +462,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Creative Designer</h6>
@@ -271,7 +483,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Finance Head</h6>
@@ -326,7 +538,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							
 								<div class="item-home">
 									<div class="job-opening">
-										<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
+										<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
 										
 										<div class="job-opening-content">
 											HR Manager
@@ -344,7 +556,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 								
 								<div class="item-home">
 									<div class="job-opening">
-										<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-job-opening" />
+										<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-job-opening" />
 										
 										<div class="job-opening-content">
 											Head Shop Manager
@@ -361,7 +573,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 								</div>
 								<div class="item-home">
 									<div class="job-opening">
-										<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
+										<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
 										
 										<div class="job-opening-content">
 											Head Shop Manager
@@ -439,7 +651,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							First Step
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-1.png" alt="step" />
+									<img src="images/step-icon-1.png" alt="step" />
 								</div>
 							</div>
 							<h5>Register with us</h5>
@@ -449,7 +661,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							Second Step
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-2.png" alt="step" />
+									<img src="images/step-icon-2.png" alt="step" />
 								</div>
 							</div>
 							<h5>Create your profile</h5>
@@ -459,7 +671,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							Third Step
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-3.png" alt="step" />
+									<img src="images/step-icon-3.png" alt="step" />
 								</div>
 							</div>
 							<h5>Upload your resume</h5>
@@ -469,7 +681,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							Now it's our turn
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-4.png" alt="step" />
+									<img src="images/step-icon-4.png" alt="step" />
 								</div>
 							</div>
 							<h5>Now take rest :)</h5>
@@ -490,34 +702,34 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 			</div>
 			<div id="sync2" class="owl-carousel">
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				
 			</div>
@@ -675,35 +887,35 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 					
 				<div id="company-post-list" class="owl-carousel company-post">
 					<div class="company">
-						<img src="resources/images/upload/company-1.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-1.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-2.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-2.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-3.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-3.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-4.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-4.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-5.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-5.png" class="img-responsive" alt="company-post" />
 					</div>
 					
 					<div class="company">
-						<img src="resources/images/upload/company-1.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-1.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-2.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-2.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-3.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-3.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-4.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-4.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-5.png" class="img-responsive" alt="company-post" />
+						<img src="images/upload/company-5.png" class="img-responsive" alt="company-post" />
 					</div>
 					
 				</div>
@@ -776,7 +988,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 			</div><!-- Container -->
 		</div><!-- Footer -->
 	</div><!-- end main wrapper -->
-
+   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -807,4 +1019,3 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 	<script src="resources/js/job-board.js"></script>
 
   </body>
-  </html>
