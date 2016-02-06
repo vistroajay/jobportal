@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Job Board</title>
+		
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.container{
+				max-width:900px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h3 align="center"><em><small>"Jobboard" Documentation by "minimalthemes" v1.0</small></em></h3>
+			<hr/>
+			<h2 align="center">"Jobboard - HTML Template"</h2>
+			<hr/>
+			<div class="row clearfix">
+				<div class="col-md-3">
+					<p align="justify">
+						Created : <br/>
+						By : <a href="http://themeforest.net/user/minimalthemes">Minimalthemes</a><br/>
+						Email : <a href="mailto:support@puriwp.com">Email Me</a><br/>
+					</p>
+				</div>
+				<div class="col-md-9">
+					<p align="justify">
+						Thank you for purchasing this item, supporting our work. Please do not forget to rate our product.
+We would be happy to see your comments and stars.
+					</p>
+				</div>
+			</div>
+			<hr/>
+			<h4 id="tbl-content"><em>Table Of Contents</em></h4>
+			<ol type="A" start="A">
+				<li><a href="#html-structure">HTML Structure</a></li>
+				<li><a href="#css-structure">CSS Structure</a></li>
+				<li><a href="#java">Javascript</a></li>
+				<li><a href="#other">Other Details</a></li>
+				<li><a href="#uploading">Uploading Templates</a></li>
+				<li><a href="#credit">Credits</a></li>
+			</ol>
+			<hr/>
+			<h3 id="html-structure">A. HTML Structure</h3>
+			<p>
+				Jobboard is XHTML Strict template. It's made with Twitter Bootstrap CSS framework. Almost every layout styling is covered by Bootstrap unless some layout that generally Bootstrap can't do. This theme is a fluid layout with two columns. The general template structure is the same throughout the template. Here is the general structure. 
+			</p>
+			<h4>Header</h4>
+			<p>
+				Header contains Top section where is containing Social Media Links, register and login  button, you can easily change the link and name according to your needs.
+				<pre>
+					<code>
+&lt;div class=&quot;top&quot;&gt;&lt;!-- top --&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;div class=&quot;media-top-right&quot;&gt;
+			&lt;ul class=&quot;media-top&quot;&gt;
+			&lt;!-- Social Media Top --&gt;
+				&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;&quot; target=&quot;blank&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;&quot; target=&quot;blank&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;&quot; target=&quot;blank&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;&quot; target=&quot;blank&quot;&gt;&lt;i class=&quot;fa fa-rss&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;&quot; target=&quot;blank&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;!-- Social Media Top --&gt;
+				&lt;!-- Reg/Login Button --&gt;
+				&lt;li&gt;&lt;button class=&quot;button reg&quot;&gt;REGISTER&lt;/button&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;button class=&quot;button login&quot;&gt;LOG IN&lt;/button&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;&lt;!-- top --&gt;
+					</code>
+				</pre>
+				
+				and then the site logo. Editing the logo you can easily change the home link and the logo image.
+				<pre>
+					<code>
+&lt;div class=&quot;col-md-4&quot;&gt;&lt;!-- logo --&gt;
+		&lt;a href=&quot;index.html&quot; title=&quot;Job Board&quot; rel=&quot;home&quot;&gt;
+			&lt;img class=&quot;main-logo&quot; src=&quot;images/logo.png&quot; alt=&quot;job board&quot; /&gt;&lt;!-- Change this With Your Logo --&gt;
+		&lt;/a&gt;
+&lt;/div&gt;&lt;!-- logo --&gt;
+					</code>
+				</pre>
+				
+			</p>
+			
+			<h4>Navigation</h4>
+			<p>
+				Site navigation is found in preview code below. To create or modify main menu items, just find this code on template package and change menu link and menu name according to your needs . To add a submenu item create child list item with class "sub-menu".
+			</p>
+			<div class="highlight">
+				<pre>
+					<code>
+&lt;!-- Navigation --&gt;
+	&lt;a id=&quot;touch-menu&quot; class=&quot;mobile-menu&quot; href=&quot;#&quot;&gt;
+		&lt;i class=&quot;fa fa-bars fa-2x&quot;&gt;&lt;/i&gt;
+	&lt;/a&gt;
+	&lt;nav&gt;
+		&lt;ul class=&quot;menu&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;HOME&lt;/a&gt;
+			&lt;ul class=&quot;sub-menu&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About Page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;blog.html&quot;&gt;Blog Page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;detail-blog.html&quot;&gt;Single Blog Page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;job-detail.html&quot;&gt;Single Job Page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;homepage-joblisting.html&quot;&gt;Job Listing&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;register.html&quot;&gt;Register Page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;signin.html&quot;&gt;Login Page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;short-codes.html&quot;&gt;Short Code&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;post-job.html&quot;&gt;Post a Job&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;post-resume.html&quot;&gt;Post a Resume&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JOB SEARCH&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;post-job.html&quot;&gt;POST A JOB&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;post-resume.html&quot;&gt;POST A RESUME&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;PRICING&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;short-codes.html&quot;&gt;SHORTCODE&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+&lt;!-- Navigation --&gt;
+					</code>
+				</pre>
+			</div>
+			
+			<h4>Slider</h4>
+			<p>
+				In The silder section you can change the image with your own image.
+				<pre>
+					<code>
+&lt;div class=&quot;main-slider&quot;&gt;&lt;!-- start main-headline section --&gt;
+		&lt;div class=&quot;slider-nav&quot;&gt;
+			&lt;a class=&quot;slider-prev&quot;&gt;&lt;i class=&quot;fa fa-chevron-circle-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;a class=&quot;slider-next&quot;&gt;&lt;i class=&quot;fa fa-chevron-circle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id=&quot;home-slider&quot; class=&quot;owl-carousel owl-theme&quot;&gt;&lt;!-- Slider --&gt;
+			&lt;div class=&quot;item-slide&quot;&gt;
+				&lt;img src=&quot;images/upload/slide-1.jpg&quot; class=&quot;img-responsive&quot;/&gt; &lt;!-- Change this image with your own image --&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;item-slide&quot;&gt;
+				&lt;img src=&quot;images/upload/slide-1.jpg&quot; class=&quot;img-responsive&quot;/&gt; &lt;!-- Change this image with your own image --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- Slider --&gt;
+&lt;/div&gt;&lt;!-- end main-headline section --&gt;
+					</code>
+				</pre>
+			</p>
+			
+			<hr/>
+			<h3 id="css-structure">B. CSS Structure</h3>
+			<p>
+				The following css files are used in every template html files. They can be found in the HEAD section of the page. Style.css is the template css file, the others are twitter bootstrap and the styles require for each template feature. 
+			</p>
+			<pre>
+				<code>
+&lt;!-- Bootstrap --&gt;
+&lt;link href=&quot;bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- Bootstrap --&gt;
+	
+&lt;!-- Main Style --&gt;
+&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- Main Style --&gt;
+	
+&lt;!-- fonts --&gt;
+&lt;link href=&#39;http://fonts.googleapis.com/css?family=Nunito:300,400,700&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+&lt;link href=&#39;http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+&lt;link href=&#39;font-awesome/css/font-awesome.css&#39; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;!-- fonts --&gt;
+	
+&lt;!-- Owl Carousel --&gt;
+&lt;link href=&quot;css/owl.carousel.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;css/owl.theme.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;css/owl.transitions.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- Owl Carousel --&gt;
+	
+&lt;!-- Form Slider --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/jslider.css&quot; type=&quot;text/css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/jslider.round.css&quot; type=&quot;text/css&quot;&gt;
+&lt;!-- Form Slider --&gt;
+				</code>
+			</pre>
+			<ul>
+				<li><b>style.css</b> - Main CSS for template, all main styles are here.</li>
+				<li>CSS
+					<ul>
+						<li><b>bootstrap.min.css</b> - Default styling for all basic HTML elements by Twitter Bootstrap and Default styling to control HTML elements in various screen width by Twitter Bootstrap</li>
+						<li><b>owl.carousel.css</b> - Default styling for Main Slider, and Page Slider</li>
+						<li><b>owl.theme.css</b> - Default styling for Theme of Slider</li>
+						<li><b>owl.transitions.css</b> - Default styling where Contains many transition efect for slider</li>
+						<li><b>jslider.css</b> - Default styling for Form slider (form input with sliding value)</li>
+						<li><b>jslider.round.css</b> - Default styling for Theme of Form slider (form input with sliding value)</li>
+					</ul>
+				</li>
+			</ul>
+			<hr/>
+			<h3 id="java">C. Javascript</h3>
+				<p>
+					This template requires the following javascript files. You should place them in every template html files. at the bottom after tag "<code>&lt;!-- end main wrapper --&gt;</code>" or at the top before "<code>&lt;!-- /head --&gt;</code>" tag.
+				</p>
+				<pre>
+					<code>
+&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+&lt;script src=&quot;bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+	
+
+&lt;!-- Tabs --&gt;
+&lt;script src=&quot;js/jquery.easytabs.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/modernizr.custom.49511.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Tabs --&gt;
+	
+&lt;!-- Owl Carousel --&gt;
+&lt;script src=&quot;js/owl.carousel.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Owl Carousel --&gt;
+	
+&lt;!-- Form Slider --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jshashtable-2.1_src.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.numberformatter-1.2.3.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/tmpl.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.dependClass-0.1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/draggable-0.1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.slider.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Form Slider --&gt;
+	
+&lt;script src=&quot;js/job-board.js&quot;&gt;&lt;/script&gt;
+					</code>
+				</pre>
+				<p><b>Contact page</b> requires more js file to set a Google map. </p>
+				<pre>
+					<code>
+&lt;!-- Map --&gt;
+&lt;script src=&quot;https://maps.googleapis.com/maps/api/js?sensor=false&quot;&gt;&lt;/script&gt;
+&lt;!-- Map --&gt;
+					</code>
+				</pre>
+				<hr/>
+				<h3 id="other">D. Other Details</h3>
+				<p>
+					This template include php file (send.php) that will process the contact form in contact.html.
+				</p>
+				<pre>
+					<code>
+&lt;?php
+$EmailFrom = $_REQUEST[&#39;email&#39;]; 
+$EmailTo = &quot;agung@puriwp.com&quot;; // Your email address here
+$Subject = Trim(stripslashes($_POST[&#39;subject&#39;]));
+$Name = Trim(stripslashes($_POST[&#39;name&#39;])); 
+$Email = Trim(stripslashes($_POST[&#39;email&#39;])); 
+$Web = Trim(stripslashes($_POST[&#39;web&#39;])); 
+$Message = Trim(stripslashes($_POST[&#39;message&#39;])); 
+$Phone = Trim(stripslashes($_POST[&#39;phone&#39;])); 
+
+
+// validation
+$validationOK=true;
+if (!$validationOK) {
+  echo &quot;Error&quot;;
+  exit;
+}
+
+// prepare email body text
+$Body = &quot;&quot;;
+$Body .= &quot;Name: &quot;;
+$Body .= $Name;
+$Body .= &quot;\n&quot;;
+$Body .= &quot;Email: &quot;;
+$Body .= $Email;
+$Body .= &quot;\n&quot;;
+$Body .= &quot;website: &quot;;
+$Body .= $Web;
+$Body .= &quot;\n&quot;;
+$Body .= &quot;Phone: &quot;;
+$Body .= $Phone;
+$Body .= &quot;\n&quot;;
+$Body .= &quot;Message: &quot;;
+$Body .= &quot;\n&quot;;
+$Body .= &quot;\n&quot;;
+$Body .= $Message;
+$Body .= &quot;\n&quot;;
+
+// send email 
+$success = mail($EmailTo, $Subject, $Body, &quot;From: &lt;$EmailFrom&gt;&quot;);
+
+// redirect to success page 
+if ($success){ ?&gt;
+	&lt;script language=&quot;javascript&quot;&gt;
+		alert(&#39;Thank you for your message we will, prosess your mail ASAP &#39;);
+		window.location = &#39;contact.html&#39;;
+	&lt;/script&gt;
+&lt;?php }
+else{ ?&gt;
+	&lt;script language=&quot;javascript&quot;&gt;
+		alert(&#39;Sorry message failde please try again.&#39;);
+		window.location = &#39;contact.html&#39;;
+	&lt;/script&gt;
+&lt;?php
+}
+?&gt;
+					</code>
+				</pre>
+				<hr/>
+				<h3 id="uploading">E. Uploading Templates</h3>
+				<p>
+					Best way to upload template is if you use FTP program. I strongly recomment you to use <a href="http://filezilla-project.org/">Filezilla</a>.
+					Filezilla is available for PC and Mac and it's easy to use. We assume that you already have hosting, so open filezilla, login and find "public_html" folder. On some servers it is called "www" folder...that's folder where you need to upload all files.
+				</p>
+				<h3 id="credit">F. Credits & Source</h3>
+				
+				<p>
+					During template development i used those javascript and graphic files:
+					<ul>
+						<li><a href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
+						<li><a href="http://os.alfajango.com/easytabs">EasyTabs plugin</a></li>
+						<li><a href="http://www.owlgraphic.com/owlcarousel/">jQuery OwlCarousel</a></li>
+						<li><a href="http://jqueryui.com/slider/">jquery.slider - Slider ui</a></li>
+						<li><a href="http://code.google.com/p/jquery-numberformatter/">jquery.numberformatter</a></li>
+					</ul>
+				</p>
+		</div>
+	</body>
+</html>

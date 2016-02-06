@@ -61,7 +61,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 				<div class="row">
 					<div class="col-md-4"><!-- logo -->
 						<a href="index.jsp" title="Job Board" rel="home">
-							<img class="main-logo" src="resources/images/Vistro logo.jpg1.jpg" alt="job board" />
+							<img class="main-logo" src="resources/images/logo.jpg" alt="job board" />
 						</a>
 					</div><!-- logo -->
 					<div class="col-md-8 main-nav"><!-- Main Navigation -->
