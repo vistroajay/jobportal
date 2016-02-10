@@ -4,12 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-store" />
-    <script type="text/javascript" src="resources/js/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
-    <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+    <link href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" type="text/css">
     <title>Vistro Jobs</title>
-    <link rel="canonical" href="resources/images/logo.jpg">
+    <link rel="canonical" href="${pageContext.request.contextPath}/resources/images/logo.jpg">
 </head>
 <body id="body" class="body">
 <!--nav starts here-->
@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand"><img alt="Brand" src="resources/images/logo.jpg" class="img-responsive logoposition"></a>
+            <a class="navbar-brand"><img alt="Brand" src="${pageContext.request.contextPath}/resources/images/logo.jpg" class="img-responsive logoposition"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -82,7 +82,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <img src="resources/images/register.png" class="img-thumbnail  img-responsive" style="margin: 0px auto;">
+                <img src="${pageContext.request.contextPath}/resources/images/register.png" class="img-thumbnail  img-responsive" style="margin: 0px auto;">
             </div>
             <div class="modal-body">
                 <div class="form-login">

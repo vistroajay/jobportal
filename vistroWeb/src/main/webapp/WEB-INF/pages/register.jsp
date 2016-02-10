@@ -7,36 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-store">
-    <script type="text/javascript" src="resources/js/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="resources/js/jqueryvalidation.js"></script>
-    <script type="text/javascript" src="resources/js/Validation.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jqueryvalidation.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/Validation.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" type="text/css">
     <title>Vistro Jobs</title>
 
-    <link rel="canonical" href="resources/images/logo.jpg">
-    <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resources/css/style.css" rel="stylesheet">
+    <link rel="canonical" href="${pageContext.request.contextPath}/resources/images/logo.jpg">
+    <link href="${pageContext.request.contextPath}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
 	<!-- Main Style -->
 
 	<!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Nunito:300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
-	<link href='resources/font-awesome/css/font-awesome.css' rel="stylesheet" type="text/css">
+	<link href='${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.css' rel="stylesheet" type="text/css">
 	<!-- fonts -->
 
 	<!-- Owl Carousel -->
-	<link href="resources/css/owl.carousel.css" rel="stylesheet">
-    <link href="resources/css/owl.theme.css" rel="stylesheet">
-	<link href="resources/css/owl.transitions.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/resources/css/owl.carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/owl.theme.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/resources/css/owl.transitions.css" rel="stylesheet">
 
 	<!-- Owl Carousel -->
 
 	<!-- Form Slider -->
-	<link rel="stylesheet" href="resources/css/jslider.css" type="text/css">
-	<link rel="stylesheet" href="resources/css/jslider.round.css" type="text/css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jslider.css" type="text/css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jslider.round.css" type="text/css">
 	<!-- Form Slider -->
   </head>
 <body>
@@ -65,7 +65,7 @@
 				<div class="row">
 					<div class="col-md-4"><!-- logo -->
 						<a href="index.html" title="Job Board" rel="home">
-							<img class="main-logo" src="resources/images/logo.jpg" alt="job board" />
+							<img class="main-logo" src="${pageContext.request.contextPath}/resources/images/logo.jpg" alt="job board" />
 						</a>
 					</div><!-- logo -->
 					<div class="col-md-8 main-nav"><!-- Main Navigation -->
@@ -260,31 +260,31 @@
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Tabs -->
-	<script src="resources/js/jquery.easytabs.min.js" type="text/javascript"></script>
-	<script src="resources/js/modernizr.custom.49511.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.easytabs.min.js" type="text/javascript"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/modernizr.custom.49511.js"></script>
 	<!-- Tabs -->
 
 	<!-- Owl Carousel -->
-	<script src="resources/js/owl.carousel.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.js"></script>
 	<!-- Owl Carousel -->
 
 	<!-- Form Slider -->
-	<script type="text/javascript" src="resources/js/jshashtable-2.1_src.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.numberformatter-1.2.3.js"></script>
-	<script type="text/javascript" src="resources/js/tmpl.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.dependClass-0.1.js"></script>
-	<script type="text/javascript" src="resources/js/draggable-0.1.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.slider.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jshashtable-2.1_src.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.numberformatter-1.2.3.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/tmpl.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dependClass-0.1.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.slider.js"></script>
 	<!-- Form Slider -->
 	
 	<!-- Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<!-- Map -->
 
-	<script src="resources/js/job-board.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/job-board.js"></script>
 
 </body>
 </html>

@@ -3,36 +3,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-store">
-    <script type="text/javascript" src="resources/js/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="resources/js/jqueryvalidation.js"></script>
-    <script type="text/javascript" src="resources/js/Validation.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jqueryvalidation.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/Validation.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" type="text/css">
     <title>Vistro Jobs</title>
 
-    <link rel="canonical" href="resources/images/logo.jpg">
-    <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resources/css/style.css" rel="stylesheet">
+    <link rel="canonical" href="${pageContext.request.contextPath}/resources/images/logo.jpg">
+    <link href="${pageContext.request.contextPath}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
 	<!-- Main Style -->
 
 	<!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Nunito:300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
-	<link href='resources/font-awesome/css/font-awesome.css' rel="stylesheet" type="text/css">
+	<link href='${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.css' rel="stylesheet" type="text/css">
 	<!-- fonts -->
 
 	<!-- Owl Carousel -->
-	<link href="resources/css/owl.carousel.css" rel="stylesheet">
-    <link href="resources/css/owl.theme.css" rel="stylesheet">
-	<link href="resources/css/owl.transitions.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/resources/css/owl.carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/owl.theme.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/resources/css/owl.transitions.css" rel="stylesheet">
 
 	<!-- Owl Carousel -->
 
 	<!-- Form Slider -->
-	<link rel="stylesheet" href="resources/css/jslider.css" type="text/css">
-	<link rel="stylesheet" href="resources/css/jslider.round.css" type="text/css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jslider.css" type="text/css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jslider.round.css" type="text/css">
 	<!-- Form Slider -->
   </head><body>
 	<div id="wrapper"><!-- start main wrapper -->
@@ -61,7 +61,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 				<div class="row">
 					<div class="col-md-4"><!-- logo -->
 						<a href="index.jsp" title="Job Board" rel="home">
-							<img class="main-logo" src="resources/images/logo.jpg" alt="job board" />
+							<img class="main-logo" src="${pageContext.request.contextPath}/resources/images/logo.jpg" alt="job board" />
 						</a>
 					</div><!-- logo -->
 					<div class="col-md-8 main-nav"><!-- Main Navigation -->
@@ -103,10 +103,10 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 				</div>
 				<div id="home-slider" class="owl-carousel owl-theme">
 					<div class="item-slide">
-						<img src="resources/images/Image1.jpg" class="img-responsive" alt="dummy-slide" />
+						<img src="${pageContext.request.contextPath}/resources/images/Image1.jpg" class="img-responsive" alt="dummy-slide" />
 					</div>
 					<div class="item-slide">
-						<img src="resources/images/Image2.jpg" class="img-responsive" alt="dummy-slide" />
+						<img src="${pageContext.request.contextPath}/resources/images/Image2.jpg" class="img-responsive" alt="dummy-slide" />
 					</div>
 				</div>
 			</div><!-- end main-headline section -->
@@ -166,7 +166,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 								
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Store General Manager</h6>
@@ -187,7 +187,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Department Head</h6>
@@ -208,7 +208,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Marketing</h6>
@@ -229,7 +229,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>General Manager</h6>
@@ -250,7 +250,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Creative Designer</h6>
@@ -271,7 +271,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 									
 									<div class="recent-job-list-home"><!-- Tabs content -->
 										<div class="job-list-logo col-md-1 ">
-											<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
+											<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
 										</div>
 										<div class="col-md-6 job-list-desc">
 											<h6>Finance Head</h6>
@@ -326,7 +326,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							
 								<div class="item-home">
 									<div class="job-opening">
-										<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
+										<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
 										
 										<div class="job-opening-content">
 											HR Manager
@@ -344,7 +344,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 								
 								<div class="item-home">
 									<div class="job-opening">
-										<img src="resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-job-opening" />
+										<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-job-opening" />
 										
 										<div class="job-opening-content">
 											Head Shop Manager
@@ -361,7 +361,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 								</div>
 								<div class="item-home">
 									<div class="job-opening">
-										<img src="resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
+										<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-job-opening" />
 										
 										<div class="job-opening-content">
 											Head Shop Manager
@@ -439,7 +439,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							First Step
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-1.png" alt="step" />
+									<img src="${pageContext.request.contextPath}/resources/images/step-icon-1.png" alt="step" />
 								</div>
 							</div>
 							<h5>Register with us</h5>
@@ -449,7 +449,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							Second Step
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-2.png" alt="step" />
+									<img src="${pageContext.request.contextPath}/resources/images/step-icon-2.png" alt="step" />
 								</div>
 							</div>
 							<h5>Create your profile</h5>
@@ -459,7 +459,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							Third Step
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-3.png" alt="step" />
+									<img src="${pageContext.request.contextPath}/resources/images/step-icon-3.png" alt="step" />
 								</div>
 							</div>
 							<h5>Upload your resume</h5>
@@ -469,7 +469,7 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 							Now it's our turn
 							<div class="step-by-inner">
 								<div class="step-by-inner-img">
-									<img src="resources/images/step-icon-4.png" alt="step" />
+									<img src="${pageContext.request.contextPath}/resources/images/step-icon-4.png" alt="step" />
 								</div>
 							</div>
 							<h5>Now take rest :)</h5>
@@ -490,34 +490,34 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 			</div>
 			<div id="sync2" class="owl-carousel">
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				<div class="testimony-image">
-					<img src="resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
+					<img src="${pageContext.request.contextPath}/resources/images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
 				</div>
 				
 			</div>
@@ -675,35 +675,35 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
 					
 				<div id="company-post-list" class="owl-carousel company-post">
 					<div class="company">
-						<img src="resources/images/upload/company-1.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-1.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-2.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-2.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-3.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-3.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-4.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-4.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-5.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-5.png" class="img-responsive" alt="company-post" />
 					</div>
 					
 					<div class="company">
-						<img src="resources/images/upload/company-1.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-1.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-2.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-2.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-3.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-3.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-4.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-4.png" class="img-responsive" alt="company-post" />
 					</div>
 					<div class="company">
-						<img src="resources/images/upload/company-5.png" class="img-responsive" alt="company-post" />
+						<img src="${pageContext.request.contextPath}/resources/images/upload/company-5.png" class="img-responsive" alt="company-post" />
 					</div>
 					
 				</div>
@@ -780,31 +780,31 @@ onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Tabs -->
-	<script src="resources/js/jquery.easytabs.min.js" type="text/javascript"></script>
-	<script src="resources/js/modernizr.custom.49511.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.easytabs.min.js" type="text/javascript"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/modernizr.custom.49511.js"></script>
 	<!-- Tabs -->
 
 	<!-- Owl Carousel -->
-	<script src="resources/js/owl.carousel.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.js"></script>
 	<!-- Owl Carousel -->
 
 	<!-- Form Slider -->
-	<script type="text/javascript" src="resources/js/jshashtable-2.1_src.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.numberformatter-1.2.3.js"></script>
-	<script type="text/javascript" src="resources/js/tmpl.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.dependClass-0.1.js"></script>
-	<script type="text/javascript" src="resources/js/draggable-0.1.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.slider.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jshashtable-2.1_src.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.numberformatter-1.2.3.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/tmpl.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dependClass-0.1.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.slider.js"></script>
 	<!-- Form Slider -->
 	
 	<!-- Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<!-- Map -->
 
-	<script src="resources/js/job-board.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/job-board.js"></script>
 
   </body>
   </html>

@@ -50,8 +50,10 @@ public class LoginController {
 				map.addAttribute("EmailID", user.getEmailID());
 				return new ModelAndView("redirect:/profile/profileview");
 			}
-			else
+			else{
+				System.out.println("sdf");
 				return new ModelAndView("login");
+			}
 		
 		}
 

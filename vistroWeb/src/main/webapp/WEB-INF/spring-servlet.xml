@@ -18,11 +18,11 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-
-	<mvc:resources mapping="resources/**" location="resources/" />
-	<mvc:resources mapping="login/resources/**" location="resources/" />
+<mvc:default-servlet-handler/>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- <mvc:resources mapping="login/resources/**" location="resources/" />
 	<mvc:resources mapping="jobs/resources/**" location="resources/" />
-	<mvc:resources mapping="profile/resources/**" location="resources/" />
+	<mvc:resources mapping="profile/resources/**" location="resources/" /> -->
 
 
 </beans>
