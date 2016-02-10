@@ -49,9 +49,9 @@
 							<li class="item"><a href="" target="blank"><i class="fa fa-google-plus"></i></a></li>
 						</ul>
 						<ul class="media-top-2 clearfix">
-							<li><a href="" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
+							<li><a href="${pageContext.request.contextPath}/login/nav/register" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
 							<li><input type="button" value="LOGIN" name="CreateCourse" class="btn btn-default btn-green btn-sm"
-onclick="document.forms[0].action = 'register.jsp'; return true;" /></li>
+onclick="document.forms[0].action = '${pageContext.request.contextPath}/login/nav/index'; return true;" /></li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>

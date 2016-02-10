@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,7 +27,12 @@ public class LoginController {
 	@Autowired
 	ILoginService loginService;
 	
-	
+	@RequestMapping(value="/nav/{name}",method = RequestMethod.POST)
+	public String navigate(@PathVariable String name) {
+		System.out.println(name);
+		return name;
+	}
+
 	
 	@RequestMapping(value="/signup",method = RequestMethod.POST)
 	public String SignupProcess(
@@ -50,10 +56,8 @@ public class LoginController {
 				map.addAttribute("EmailID", user.getEmailID());
 				return new ModelAndView("redirect:/profile/profileview");
 			}
-			else{
-				System.out.println("sdf");
+			else
 				return new ModelAndView("login");
-			}
 		
 		}
 
