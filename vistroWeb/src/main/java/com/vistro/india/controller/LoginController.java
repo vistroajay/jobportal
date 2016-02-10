@@ -27,7 +27,7 @@ public class LoginController {
 	@Autowired
 	ILoginService loginService;
 	
-	@RequestMapping(value="/nav/{name}",method = RequestMethod.POST)
+	@RequestMapping(value="/nav/{name}",method = RequestMethod.GET)
 	public String navigate(@PathVariable String name) {
 		System.out.println(name);
 		return name;

@@ -53,8 +53,8 @@
 							<li class="item"><a href="" target="blank"><i class="fa fa-google-plus"></i></a></li>
 						</ul>
 						<ul class="media-top-2 clearfix">
-							<li><a href="" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
-							<li><a href="" class="btn btn-default btn-green btn-sm" >LOG IN</a></li>
+							<li><a href="${pageContext.request.contextPath}/login/nav/register" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
+							<li><a href="${pageContext.request.contextPath}/login/nav/login" class="btn btn-default btn-green btn-sm" >LOG IN</a></li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
