@@ -23,7 +23,7 @@ public class DBLoginDao implements IDBLoginDao {
 	public int insert(User user) {
 		return jdbcTemplate.update(
 				SignupSqlConstants.INSERT_INTO_SIGNUPTABLE,
-				new Object[] { null,user.getUserFirstName(),user.getUserLastName(),user.getEmailID(),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,user.getContactNumber1(),null,null,null,null,null,user.getPassword(),null,null,null,null});
+				new Object[] { null,user.getUserFirstName(),user.getUserLastName(),user.getEmailID(),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,user.getContactNumber1(),null,null,null,null,null,user.getPassword(),null,null,null,null,null,null,null,null,null,null,null,null,null});
 	}
 
 

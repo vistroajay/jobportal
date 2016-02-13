@@ -32,11 +32,19 @@
 	<link href="${pageContext.request.contextPath}/resources/css/owl.transitions.css" rel="stylesheet">
 
 	<!-- Owl Carousel -->
+	 <!-- Date Picker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-ui.1.10.3.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/effect.js"></script>
+    <!-- Date Picker -->
+	
 
 	<!-- Form Slider -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jslider.css" type="text/css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jslider.round.css" type="text/css">
 	<!-- Form Slider -->
+
 	 <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -44,7 +52,16 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/effect.js"></script>
 
-
+   <!-- Profile Validation -->
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <!-- Profile Validation -->
+      <!-- Date Picker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-ui.1.10.3.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/effect.js"></script>
+    <!-- Date Picker -->
    
 
 </head>
@@ -76,7 +93,7 @@
                                             </div>
                                         </li>
                                         <li><a href="#">
-                                            <div class="user_img"><img src="${pageContext.request.contextPath}/resources/images/1.png" alt=""></div>
+                                            <div class="user_img"><img src="images/1.png" alt=""></div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor amet</p>
                                                 <p><span>1 hour ago</span></p>
@@ -84,7 +101,7 @@
                                             <div class="clearfix"></div>
                                         </a></li>
                                         <li class="odd"><a href="#">
-                                            <div class="user_img"><img src="${pageContext.request.contextPath}/resources/images/2.png" alt=""></div>
+                                            <div class="user_img"><img src="images/2.png" alt=""></div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -92,7 +109,7 @@
                                             <div class="clearfix"></div>
                                         </a></li>
                                         <li><a href="#">
-                                            <div class="user_img"><img src="${pageContext.request.contextPath}/resources/images/3.png" alt=""></div>
+                                            <div class="user_img"><img src="images/3.png" alt=""></div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -115,7 +132,7 @@
                                             </div>
                                         </li>
                                         <li><a href="#">
-                                            <div class="user_img"><img src="${pageContext.request.contextPath}/resources/images/2.png" alt=""></div>
+                                            <div class="user_img"><img src="images/2.png" alt=""></div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor amet</p>
                                                 <p><span>1 hour ago</span></p>
@@ -123,7 +140,7 @@
                                             <div class="clearfix"></div>
                                         </a></li>
                                         <li class="odd"><a href="#">
-                                            <div class="user_img"><img src="${pageContext.request.contextPath}/resources/images/1.png" alt=""></div>
+                                            <div class="user_img"><img src="images/1.png" alt=""></div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -131,7 +148,7 @@
                                             <div class="clearfix"></div>
                                         </a></li>
                                         <li><a href="#">
-                                            <div class="user_img"><img src="${pageContext.request.contextPath}/resources/images/3.png" alt=""></div>
+                                            <div class="user_img"><img src="images/3.png" alt=""></div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -148,10 +165,9 @@
                                 <li class="dropdown profile_details_drop col-xs-4 col-lg-5">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                         <div class="profile_img">
-                                            <span class="prfil-img"><img src="${pageContext.request.contextPath}/resources/images/a.png" alt=""> </span>
+                                            <span class="prfil-img"><img src="images/a.png" alt=""> </span>
                                             <div class="user-name">
                                                 <p>${UserFirstName}</p>
-<%--                                                 <c:out value="${EmailID}" /> --%>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -178,7 +194,7 @@
             <div class="row">
                 <div class="col-md-4"><!-- logo -->
                     <a href="index.html" title="Job Board" rel="home">
-                        <img class="logosize" src="${pageContext.request.contextPath}/resources/images/logo.jpg" alt="job board" />
+                        <img class="logosize" src="${pageContext.request.contextPath}/resources/images/Logo 2.jpg" alt="job board" />
                     </a>
                 </div><!-- logo -->
                 <div class="col-md-8 main-nav"><!-- Main Navigation -->
@@ -226,23 +242,31 @@
                 </a>
             </div>
 
-        <div id="collapseOne" class="panel-collapse collapse">
+        <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="button text-right">
 
-                                <button type="button" id="PersonalInfoEdit"  class="btn btn-default btn-blue"><i class="fa fa-pencil pull-left" class="form-control" >Edit</i></button>
+                                <button type="button" id="PersonalInfoEdit" class="btn btn-default btn-blue"><i class="fa fa-pencil pull-left" class="form-control" >Edit</i></button>
 
-                            <form name="form" id="form" class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/profile/profileUpdate">
+                            <form class="form-horizontal text-left" role="form" name="myform" id="myform" method="POST" action="${pageContext.request.contextPath}/profile/profileUpdate">
+                               <div class="form-group">
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2  ">
+                                        <label for="fullname" class="control-label">Email</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                                        <input type="text" class="form-control form-dark" id="fullname" name="EmailID" value="${EmailID}"  placeholder="FullName">
+                                        <div id="fullname-message" class="error-message"></div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2  ">
                                         <label for="fullname" class="control-label">Full Name</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                        <input type="text" class="form-control form-dark" id="UserFirstName" name="UserFirstName" value="${UserFirstName}  ${UserLastName}"  placeholder="FullName" class="form-control" type="text" disabled>
-<%--                                         <c:out value="${UserFirstName}" />  --%>
+                                        <input type="text" class="form-control form-dark" id="fullname" value="${UserFirstName}  ${UserLastName}"   placeholder="FullName">
                                         <div id="fullname-message" class="error-message"></div>
                                     </div>
                                 </div>
@@ -251,7 +275,7 @@
                                         <label for="currentlocation" class="control-label">Current location</label>
                                     </div>
                                     <div class="col-sm-12 col-sm-9 col-md-9 col-md-9">
-                                        <input type="text" class="form-control form-dark" id="Location" name="Location" value="${Location}" placeholder="Current Location" class="form-control" id="currentlocation disabledinput" type="text" >
+                                        <input type="text" class="form-control form-dark" id="currentlocation" name="Location" value="${Location}" placeholder="Current Location">
                                         <div id="currentlocation-message" class="error-message"></div>
                                     </div>
                                 </div>
@@ -262,13 +286,14 @@
                                        <div class="col-sm-1 col-xs-12 col-md-6">
                                            <div class="col-sm-5 col-xs-12 col-md-6 text-left">
                                                <div class="form-group">
-                                            <select class="form-control" id="Functional area" type="text" >
+                                                   <select class="form-control personaldropdown" id="functionalarea" placeholder="Functional Area">
                                                 <option>Blank 1</option>
                                                 <option>Blank 2</option>
                                                 <option>Blank 3</option>
                                                 <option>Blank 4</option>
                                                 <option>Blank 5</option>
                                             </select>
+                                                   <div id="functionalarea-message" class="error-message"></div>
                                         </div>
                                         </div>
                                        </div>
@@ -280,13 +305,14 @@
                                     <div class="col-sm-1 col-xs-12 col-md-6">
                                         <div class="col-sm-5 col-xs-12 col-md-6 text-left">
                                             <div class="form-group">
-                                                <select class="form-control"  id="Roles disabledinput" type="text" required="">
+                                                <select class="form-control personaldropdown" id="roles" placeholder="Roles">
                                                     <option>Blank 1</option>
                                                     <option>Blank 2</option>
                                                     <option>Blank 3</option>
                                                     <option>Blank 4</option>
                                                     <option>Blank 5</option>
                                                 </select>
+                                                <div id="roles-message" class="error-message"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -298,13 +324,14 @@
                                     <div class="col-sm-1 col-xs-12 col-md-6">
                                         <div class="col-sm-5 col-xs-12 col-md-6 text-left">
                                             <div class="form-group">
-                                                <select class="form-control" id="Industry Type disabledinput" type="text" required="">
+                                                <select class="form-control personaldropdown" id="industrytype" placeholder="Industry Type">
                                                     <option>Blank 1</option>
                                                     <option>Blank 2</option>
                                                     <option>Blank 3</option>
                                                     <option>Blank 4</option>
                                                     <option>Blank 5</option>
                                                 </select>
+                                                <div id="industrytype-message" class="error-message"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -313,11 +340,12 @@
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                         <label class="control-label">Date of Birth</label>
                                     </div>
-                                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-                                        <div class="col-sm-1">
-                                            <div class="form-row dropdown-widths" class="ui-datepicker">
-                                                 <input type="text" id="datepicker" value="${Dateofbirth}"  >
+                                    <div class="col-sm-1 col-xs-12 col-md-6 text-left">
+                                        <div class="col-sm-5">
+                                            <div class="form-row dropdown-widths dateofbirth" class="ui-datepicker">
+                                                <input type="text" id="dateofbirth" name="Dateofbirth" value="${Dateofbirth}" placeholder="Date of Birth">
                                             </div>
+                                            <div id="dateofbirth-message" class="error-message"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -327,10 +355,10 @@
                                             <label class="control-label">Gender</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-10 col-sm-9 col-sm-9">
-                                            <input type="Radio" class="radioinput" name="Gender" id="R1" value="Male" id="Male disabledinput" type="text"  >
-                                            <label for="R1">Male</label>
-                                            <input type="Radio"  class="radioinput"name="Gender" id="R2" value="Female" id="Female disabledinput" type="text" >
-                                            <label for="R1">Female</label>
+                                        <input type="radio" name="gender" value="Male" id="R1"> Male
+
+                                        <input type="radio" name="gender" value="Female" id="R2"> Female
+
                                         <br>
                                         <div id="gender-message" class="error-message"></div>
                                     </div>
@@ -341,8 +369,8 @@
                                         <label for="keyskills" class="control-label">Key Skills</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-9 col-md-9 col-md-9">
-                                        <input type="text" class="form-control form-dark" id="keyskills" value="${Keyskills}" placeholder="KeySkill" class="form-control"  id="keyskills disabledinput" type="text" >
-                                        <div id="key skills-message" class="error-message"></div>
+                                        <input type="text" class="form-control form-dark" id="keyskills" name="Keyskills" value="${Keyskills}"  placeholder="KeySkill">
+                                        <div id="keyskills-message" class="error-message"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -352,24 +380,25 @@
                                     <div class="col-sm-1 col-xs-12 col-md-6">
                                         <div class="col-sm-5 col-xs-12 col-md-6 text-left">
                                             <div class="form-group">
-                                                <select class="form-control" id="Experience disabledinput" value="${Experience}" type="text" >
+                                                <select class="form-control personaldropdown" id="Experience">
                                                     <option>Blank 1</option>
                                                     <option>Blank 2</option>
                                                     <option>Blank 3</option>
                                                     <option>Blank 4</option>
                                                     <option>Blank 5</option>
                                                 </select>
+                                                <div id="experience-message" class="error-message"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                        <label for="mobile" class="control-label">Mobile</label>
+                                        <label for="personalmobile" class="control-label">Mobile</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                        <input type="text" class="form-control form-dark" id="mobile" value="${ContactNumber1}" placeholder="Eg: 123456789" class="form-control"  id="mobile disabledinput" type="text" required="">
-                                        <div id="mobile-message" class="error-message"></div>
+                                        <input type="text" class="form-control form-dark" id="personalmobile" name="ContactNumber1" value="${ContactNumber1}"  placeholder="Eg: 123456789">
+                                        <div id="personalmobile-message" class="error-message"></div>
                                     </div>
                                     <br>
                                     <br>
@@ -381,7 +410,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-                                            <input type="textArea" class="form-control form-dark" id="address" value="${AddressLine1}" rows="5" placeholder="Address"  class="form-control"  id="address disabledinput" type="text">
+                                            <textarea class="form-control form-dark" rows="5" name="AddressLine1"  value="${AddressLine1}"  placeholder="Address" id="address"></textarea>
                                             <div id="address-message" class="error-message"></div>
                                         </div>
                                     </div>
@@ -389,7 +418,7 @@
 <!--                                 <div class="checkbox"> -->
 <!--                                     <label> -->
 <!--                                         <div class="text-left"> -->
-<!--                                             <input type="checkbox" id="Temp Add disabledinput" type="text"   value="">TemporaryAddress &amp; Permanent Address same or not..</div> -->
+<!--                                             <input type="checkbox" id="TempAdd" type="text" disabled  value="">TemporaryAddress &amp; Permanent Address same or not..</div> -->
 <!--                                     </label> -->
 <!--                                 </div> -->
                                 <br>
@@ -399,15 +428,16 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-                                            <input type="textArea" class="form-control form-dark" id="resume" value="${ResumeSummary}" rows="5" placeholder="Resume Summary"  class="form-control"  id="resume disabledinput" type="text">
+                                            <textarea class="form-control form-dark" rows="5" name="ResumeSummary" value="${ResumeSummary}" placeholder="Resume Summary" id="resume"></textarea>
                                             <div id="resume-message" class="error-message"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <input type="file" class="filestyle" data-buttonname="btn-primary" id="FileButton disabledinput" type="text">
+                                        <input type="file" class="filestyle" data-buttonname="btn-primary" id="FileButton">
                                     </div>
+                                    <div id="uploadresume-message" class="error-message"></div>
                                 </div>
-									<button type="submit" value="Submit" class="btn btn-default btn-green">Save</button>
+                                <input type="submit" id="personalinfobutton" value="submit">
                             </form>
                         </div>
                     </div>
@@ -416,7 +446,7 @@
         </div>
         </div>
     </div>
-            <div class="panel-group job-accordion" id="accordion1">
+ <div class="panel-group job-accordion" id="accordion1">
                 <div class="panel panel-default">
                     <div class="panel-heading clearfix">
                         <h4 class="panel-title">
@@ -433,15 +463,16 @@
                                     <div class="col-md-12">
                                         <div class="button text-right">
 
-                                            <button type="button" class="btn btn-default btn-blue"><i class="fa fa-pencil pull-left">Edit</i></button>
+                                            <button type="button" class="btn btn-default btn-blue" id="EducationEdit"><i class="fa fa-pencil pull-left">Edit</i></button>
 
-                                            <form class="form-horizontal text-left" role="form" name="myform1">
+                                            <form class="form-horizontal text-left" role="form" name="myform" id="myform" method="POST" action="${pageContext.request.contextPath}/profile/profileUpdateQualification">
+<!--                                            <table> -->
                                             <div class="form-group">
                                                 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                                     <label for="qualification" class="control-label">Qualification</label>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                    <input type="text" class="form-control form-dark" id="qualification" value="${Qualification}" placeholder="Qualification" class="form-control" id="qualification disabledinput" type="text">
+                                                    <input type="text" class="form-control form-dark" id="qualification" name="CourseName"  placeholder="Qualification">
                                                     <div id="qualification-message" class="error-message"></div>
                                                 </div>
                                             </div>
@@ -450,33 +481,38 @@
                                                     <label for="specialisation" class="control-label">Specialisation</label>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                    <input type="text" class="form-control form-dark" id="specialisation" value="${Specialisation}" placeholder="Specialisation" class="form-control" id="specialisation disabledinput" type="text">
+                                                    <input type="text" class="form-control form-dark" id="specialisation" name="Specialisation" placeholder="Specialisation">
                                                     <div id="specialisation-message" class="error-message"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                                    <label for="year of passing" class="control-label">Year Of Passing</label>
+                                                    <label for="yearofpassing" class="control-label">Year Of Passing</label>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                    <input type="text" class="form-control form-dark" id="year of passing" value="${Yearofpassing}" placeholder="Year Of Passing" class="form-control" id="year of passing disabledinput" type="text">
-                                                    <div id="year of passing-message" class="error-message"></div>
+                                                    <input type="text" class="form-control form-dark" id="yearofpassing" name="Yearofpassing"  placeholder="DD/MM/YYYY">
+                                                    <div id="yearofpassing-message" class="error-message"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">
-                                                    <label for="institution" class="control-label">Institution/University</label>
+                                                    <label for="institution" class="control-label">Institution/<br>University</label>
                                                 </div>
-                                                <div class="col-xs-12  col-sm-9 col-md-9 col-lg-9">
-                                                    <input type="text" class="form-control form-dark" id="institution" value="${University}" placeholder="Institution" class="form-control" id="institution disabledinput" type="text">
+                                                <div class="col-xs-12  col-sm-9 col-md-10 col-lg-9">
+                                                    <input type="text" class="form-control form-dark" id="institution" name="UniversityName" placeholder="Institution">
                                             </div>
                                                 <div id="institution-message" class="error-message"></div>
-
                                             </div>
-                                        </form>
+<%--                                                                                          </form>    --%>
+<%--                                             <form class="form-horizontal text-left" role="form" name="myform1" id="myform1" > --%>
+<!--                                              <p align="left"> -->
+											<div id="addQual">
+                                                <input type="submit" id="addQualificationbutton" value="Save" class="btn btn-default btn-blue btn-lg">
                                             <div class="button text-right">
-                                                <button type="button" class="btn btn-default btn-blue" id="addeducation"><i class="fa fa-plus pull-left">Add</i></button>
+                                                <button type="button" class="btn btn-default btn-blue" id="addQualification" ><i class="fa fa-plus pull-left">Add</i></button>
                                             </div>
+                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -503,20 +539,22 @@
                                         <div class="col-md-12">
                                             <div class="button text-right">
 
-                                                <button type="button" class="btn btn-default btn-blue"><i class="fa fa-pencil pull-left">Edit</i></button>
+                                                <button type="button" class="btn btn-default btn-blue" id="ExperienceEdit"><i class="fa fa-pencil pull-left">Edit</i></button>
 
-                                                <form class="form-horizontal text-left" role="form" name="myform2">
+                                                <form class="form-horizontal text-left" role="form" name="myform2" id="myform2">
                                                 <div class="form-group">
-                                                    <div class="col-sm-2 col-xs-10 col-md-12 col-lg-2">
+                                                    <div class="col-sm-2 col-xs-10 col-md-2 col-lg-2">
                                                         <label class="control-label" id="duration">Duration</label>
                                                     </div>
-                                                    <div class="col-sm-1 col-xs-4 col-md-12 col-lg-10">
+                                                    <div class="col-sm-1 col-xs-4 col-md-9 col-lg-10">
                                                         <div class="form-row ">
-                                                            <div class="col-lg-5">From:
-                                                                <input type="text" id="datepicker1" >
+                                                            <div class="col-lg-5 col-md-4">From:
+                                                                <input type="text" id="experiencefrom">
+                                                                <div id="experiencefrom-message" class="error-message"></div>
                                                             </div>
-                                                            <div class="col-lg-5">To:
-                                                                <input type="text" id="datepicker2" >
+                                                            <div class="col-lg-5 col-md-8">To:
+                                                                <input type="text" id="experienceto">
+                                                                <div id="experienceto-message" class="error-message"></div>
                                                             </div>
                                                             <div class="col-lg-4"></div>
                                                         </div>
@@ -527,7 +565,7 @@
                                                         <label for="company" class="control-label">Company Name</label>
                                                     </div>
                                                     <div class="col-sm-9 col-xs-12 col-md-9 col-lg-9">
-                                                        <input type="text" class="form-control form-dark" id="company" placeholder="Company Name" class="form-control" id="company disabledinput" value="${Companyname}" type="text">
+                                                        <input type="text" class="form-control form-dark" id="company" placeholder="Company Name" class="form-control" id="company disabledinput" type="text">
                                                     </div>
                                                     <div id="company-message" class="error-message"></div>
                                                 </div>
@@ -536,41 +574,42 @@
                                                         <label for="designation" class="control-label">Designation</label>
                                                     </div>
                                                     <div class="col-sm-9 col-xs-12 col-md-9 col-lg-9">
-                                                        <input type="text" class="form-control form-dark" id="designation" value="${Companyname}" placeholder="Designation" class="form-control" id="designation disabledinput" type="text">
+                                                        <input type="text" class="form-control form-dark" id="designation" placeholder="Designation" class="form-control" id="designation disabledinput" type="text">
                                                     </div>
                                                     <div id="designation-message" class="error-message"></div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-sm-2 col-xs-12 col-md-2 col-lg-2">
-                                                        <label for="role" class="control-label">Role</label>
+                                                        <label for="companyrole" class="control-label">Role</label>
                                                     </div>
                                                     <div class="col-sm-9 col-xs-12 col-md-9 col-lg-9">
-                                                        <input type="text" class="form-control form-dark" id="role" value="${Role}" placeholder="Role" class="form-control" id="role disabledinput" type="text">
+                                                        <input type="text" class="form-control form-dark" id="companyrole" placeholder="Role" class="form-control" id="role disabledinput" type="text">
                                                     </div>
-                                                    <div id="role-message" class="error-message"></div>
+                                                    <div id="companyrole-message" class="error-message"></div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-sm-2 col-xs-12 col-md-2 col-lg-2">
-                                                        <label for="key skills1" class="control-label">Key Skills</label>
+                                                        <label for="companykeyskills" class="control-label">Key Skills</label>
                                                     </div>
                                                     <div class="col-sm-9 col-xs-12 col-md-9 col-lg-9">
-                                                        <input type="text" class="form-control form-dark" id="key skills1"value="${Keyskills}" placeholder="KeySkill" class="form-control" id="key skills1 disabledinput" type="text">
+                                                        <input type="text" class="form-control form-dark" id="companykeyskills" placeholder="KeySkill" class="form-control" id="key skills1 disabledinput" type="text">
                                                     </div>
-                                                    <div id="key-message" class="error-message"></div>
+                                                    <div id="companykeyskills-message" class="error-message"></div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-sm-2 col-xs-12 col-md-2 col-lg-2">
                                                         <label for="notice" class="control-label">Notice Period</label>
                                                     </div>
                                                     <div class="col-sm-9 col-xs-12 col-md-9 col-lg-9">
-                                                        <input type="text" class="form-control form-dark" id="notice" value="${NoticePeriod}" placeholder="Notice Period" class="form-control" id="notice disabledinput" type="text">
+                                                        <input type="text" class="form-control form-dark" id="notice" placeholder="Notice Period" class="form-control" id="notice disabledinput" type="text">
                                                     </div>
                                                     <div id="notice-message" class="error-message"></div>
 
                                                 </div>
+                                                    <input type="submit" id="experienceinfobutton" value="submit">
                                             </form>
                                                 <div class="button text-right">
-                                                    <button type="button" class="btn btn-default btn-blue"><i class="fa fa-plus pull-left">Add</i></button>
+                                                    <button type="button" class="btn btn-default btn-blue" onclick="addeducationbutton()"><i class="fa fa-plus pull-left">Add</i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -605,35 +644,40 @@
                                             <div class="col-md-12">
                                                 <div class="button text-right">
 
-                                                    <button type="button" class="btn btn-default btn-blue"><i class="fa fa-pencil pull-left">Edit</i></button>
+                                                    <button type="button" class="btn btn-default btn-blue" id="CertificationEdit"><i class="fa fa-pencil pull-left">Edit</i></button>
 
-                                                    <form class="form-horizontal text-left" role="form" name="form3">
+                                                    <form class="form-horizontal text-left" role="form" name="myform3" id="myform3">
                                                     <div class="form-group">
                                                         <div class="col-sm-2 col-xs-12 col-md-2 col-lg-2">
                                                             <label for="certification" class="control-label">Certification</label>
                                                         </div>
                                                         <div class="col-sm-9 col-xs-12 col-md-9 col-lg-9">
-                                                            <input type="text" class="form-control form-dark" id="certification" placeholder="Certification" class="form-control" id="certification disabledinput" type="text">
+                                                            <input type="text" class="form-control form-dark" id="certification" placeholder="Certification">
                                                         </div>
                                                         <div id="certification-message" class="error-message"></div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <div class="col-sm-2 col-xs-10 col-md-12 col-lg-2">
+                                                        <div class="col-sm-2 col-xs-10 col-md-2 col-lg-2">
                                                             <label class="control-label" id="duration1">Duration</label>
                                                         </div>
-                                                        <div class="col-sm-1 col-xs-4 col-md-12 col-lg-10">
+                                                        <div class="col-sm-1 col-xs-4 col-md-9 col-lg-10">
                                                             <div class="form-row">
-                                                                <div class="col-lg-5">From:
-                                                                    <input type="text" id="datepicker3">
+                                                                <div class="col-lg-5 col-md-4">From:
+                                                                    <input type="text" id="certificationfrom">
+                                                                    <div id="certificationfrom-message" class="error-message"></div>
                                                                 </div>
-                                                                <div class="col-lg-5">To:
-                                                                    <input type="text" id="datepicker4">
+                                                                <div class="col-lg-5 col-md-8">To:
+                                                                    <input type="text" id="certificationto">
+                                                                    <div id="certificationto-message" class="error-message"></div>
                                                                 </div>
                                                                 <div class="col-lg-4"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
+                                                    <div class="button text-right">
+                                                        <button type="button" class="btn btn-default btn-blue" onclick="addeducationbutton()"><i class="fa fa-plus pull-left">Add</i></button>
+                                                    </div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -646,117 +690,126 @@
                                                             <div class="col-md-12">
                                                                 <div class="button text-right">
 
-                                                                    <button type="button" class="btn btn-default btn-blue"><i class="fa fa-pencil pull-left">Edit</i></button>
+                                                                    <button type="button" class="btn btn-default btn-blue" id="LanguagesEdit"><i class="fa fa-pencil pull-left">Edit</i></button>
 
-                                                                    <form class="form-horizontal text-left" role="form">
+                                                                    <form class="form-horizontal text-left" role="form" name="myform4" id="myform4">
                                                                     <div class="form-group">
                                                                         <div class="col-xs-12 col-sm-2 col-md-2 col -lg-2">
                                                                             <label for="languages" class="control-label">Languages Known</label>
                                                                         </div>
                                                                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                                            <input type="text" class="form-control form-dark" id="languages" placeholder="Text Here" class="form-control" id="languages disabledinput" type="text">
+                                                                            <input type="text" class="form-control form-dark" id="languages" placeholder="Text Here">
                                                                         </div>
+                                                                        <div id="languages-message" class="error-message"></div>
                                                                         <br>
                                                                         <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2 text-right">
                                                                             <label for="write" class="control-label">Write</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm"  id="write"  id="write disabledinput" type="text" class="languagesknown">
+                                                                            <input type="checkbox" class="form-control input-sm"  id="write">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 text-right">
                                                                             <label for="read" class="control-label">Read</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="read" id="read disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="read">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-2   text-right">
                                                                             <label for="speak" class="control-label">Speak</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-1  text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="speak"  id="speak disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="speak">
                                                                         </div>
+                                                                        <div id="languagecheckbox1-message" class="error-message"></div>
                                                                     </div>
                                                                     <div class="form-group text-left">
                                                                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                                                             <label for="languages1" class="control-label">Languages Known</label>
                                                                         </div>
                                                                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                                            <input type="text" class="form-control form-dark" id="languages1" placeholder="Text Here" class="form-control" id="languages1 disabledinput" type="text">
+                                                                            <input type="text" class="form-control form-dark" id="languages1" placeholder="Text Here">
                                                                         </div>
+                                                                        <div id="languages1-message" class="error-message"></div>
                                                                         <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2 text-right">
                                                                             <label for="write1" class="control-label">Write</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="write1"  id="write1 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="write1">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 text-right">
                                                                             <label for="read1" class="control-label">Read</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="read1"  id="read1 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="read1">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-2   text-right">
                                                                             <label for="speak1" class="control-label">Speak</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-1  text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="speak1" id="speak1 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="speak1">
                                                                         </div>
+                                                                        <div id="languagecheckbox2-message" class="error-message"></div>
                                                                     </div>
                                                                     <div class="form-group text-left">
                                                                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                                                             <label for="languages2" class="control-label">Languages Known</label>
                                                                         </div>
                                                                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                                            <input type="text" class="form-control form-dark" id="languages2" placeholder="Text Here" class="form-control" id="languages2 disabledinput" type="text">
+                                                                            <input type="text" class="form-control form-dark" id="languages2" placeholder="Text Here">
                                                                         </div>
+                                                                        <div id="languages2-message" class="error-message"></div>
                                                                         <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2 text-right">
                                                                             <label for="write2" class="control-label">Write</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="write2"  id="write2 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="write2">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 text-right">
                                                                             <label for="read2" class="control-label">Read</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="read2"  id="read2 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="read2">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-2   text-right">
                                                                             <label for="speak2" class="control-label">Speak</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-1  text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="speak2"  id="speak2 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="speak2">
                                                                         </div>
+                                                                        <div id="languagecheckbox3-message" class="error-message"></div>
                                                                     </div>
                                                                     <div class="form-group text-left">
                                                                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                                                             <label for="languages3" class="control-label">Languages Known</label>
                                                                         </div>
                                                                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                                                                            <input type="text" class="form-control form-dark" id="languages3" placeholder="Text Here" class="form-control"  id="languages3 disabledinput" type="text">
+                                                                            <input type="text" class="form-control form-dark" id="languages3" placeholder="Text Here">
                                                                         </div>
+                                                                        <div id="languages3-message" class="error-message"></div>
                                                                         <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2 text-right">
                                                                             <label for="write3" class="control-label">Write</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="write3"  id="write3 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="write3">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 text-right">
                                                                             <label for="read3" class="control-label">Read</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="read3" id="read3 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="read3">
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-2   text-right">
                                                                             <label for="speak3" class="control-label">Speak</label>
                                                                         </div>
                                                                         <div class="col-lg-1 col-md-1 col-sm-1  col-xs-1  text-right">
-                                                                            <input type="checkbox" class="form-control input-sm" id="speak3" id="speak3 disabledinput" type="text">
+                                                                            <input type="checkbox" class="form-control input-sm" id="speak3">
                                                                         </div>
+                                                                        <div id="languagecheckbox4-message" class="error-message"></div>
                                                                     </div>
+                                                                        <input type="submit" id="otherdetailsinfobutton" value="submit">
                                                                 </form>
                                                                     <div class="button text-right">
-                                                                        <button type="button" class="btn btn-default btn-blue"><i class="fa fa-plus pull-left">Add</i></button>
+                                                                        <button type="button" class="btn btn-default btn-blue" onclick="addlanguagesbutton()"><i class="fa fa-plus pull-left">Add</i></button>
                                                                     </div>
                                                             </div>
                                                         </div>
@@ -923,9 +976,8 @@
     </div><!-- Footer -->
 </div><!-- end main wrapper -->
 
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="${pageContext.request.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
 

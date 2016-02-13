@@ -1,70 +1,41 @@
 package com.vistro.india.bo;
 
 public class JobSearch {
-	private String JobName;
-	private String JobDescription;
-	private String LocationName;
-	private String SkillName;
-	
-	public String getLocationName() {
-		return LocationName;
+	private String jobId;
+	private String jobName;
+	private String jobDescription;
+	private String locationName;
+	private String jobTypeName;
+	public String getJobId() {
+		return jobId;
 	}
-	public void setLocationName(String locationName) {
-		LocationName = locationName;
-	}
-	public String getSkillName() {
-		return SkillName;
-	}
-	public void setSkillName(String skillName) {
-		SkillName = skillName;
+	public void setJobId(String jobId) {
+		this.jobId = jobId;
 	}
 	public String getJobName() {
-		return JobName;
+		return jobName;
 	}
 	public void setJobName(String jobName) {
-		JobName = jobName;
+		this.jobName = jobName;
 	}
 	public String getJobDescription() {
-		return JobDescription;
+		return jobDescription;
 	}
 	public void setJobDescription(String jobDescription) {
-		JobDescription = jobDescription;
+		this.jobDescription = jobDescription;
 	}
-	@Override
-	public String toString() {
-		return "JobSearch [JobName=" + JobName + ", JobDescription=" + JobDescription + ", LocationName=" + LocationName
-				+ ", SkillName=" + SkillName + "]";
+	public String getLocationName() {
+		return locationName;
 	}
-
+	public void setLocationName(String locationName) {
+		this.locationName = locationName;
+	}
+	public String getJobTypeName() {
+		return jobTypeName;
+	}
+	public void setJobTypeName(String jobTypeName) {
+		this.jobTypeName = jobTypeName;
+	}
 	
-
-//	private String skills;
-//	private String location;
-//	private String experience;
-//	private String result;
-//	public String getSkills() {
-//		return skills;
-//	}
-//	public void setSkills(String skills) {
-//		this.skills = skills;
-//	}
-//	public String getLocation() {
-//		return location;
-//	}
-//	public void setLocation(String location) {
-//		this.location = location;
-//	}
-//	public String getExperience() {
-//		return experience;
-//	}
-//	public void setExperience(String experience) {
-//		this.experience = experience;
-//	}
-//	public String getResult() {
-//		return result;
-//	}
-//	public void setResult(String result) {
-//		this.result = result;
-//	}
 	
 }

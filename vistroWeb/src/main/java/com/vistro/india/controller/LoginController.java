@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,20 +26,30 @@ public class LoginController {
 	@Autowired
 	ILoginService loginService;
 	
-	@RequestMapping(value="/nav/{name}",method = RequestMethod.GET)
-	public String navigate(@PathVariable String name) {
-		System.out.println(name);
-		return name;
+	@RequestMapping(value="/demo",method = RequestMethod.GET)
+	public ModelAndView showRegisterpage() {
+		
+		   return new ModelAndView("register");
+		
+	}
+	@RequestMapping(value="/demologin",method = RequestMethod.GET)
+	public ModelAndView showLogin() {
+		
+		   return new ModelAndView("login");
+		
 	}
 
 	
 	@RequestMapping(value="/signup",method = RequestMethod.POST)
-	public String SignupProcess(
-			@ModelAttribute User command ,ModelMap map) {
+	public ModelAndView SignupProcess(@ModelAttribute User command ,ModelMap map) {
+		int userregistration;
 		System.out.println(command.getUserFirstName());
-		loginService.userRegistration(command);
-		map.addAttribute(command);
-		return "login";
+		userregistration=loginService.userRegistration(command);
+		if(userregistration==1){
+		     map.addAttribute(command);
+		   return new ModelAndView("login");
+		}else
+			return new ModelAndView("register");	
 	}
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
 	public ModelAndView loginProcess(@ModelAttribute User user ,HttpServletRequest httpServletRequest,ModelMap map) {
@@ -54,6 +63,7 @@ public class LoginController {
 			if (loginProcess == 1) {
 				//modelMap.addAttribute("EmailID", logincommand.getUserName());
 				map.addAttribute("EmailID", user.getEmailID());
+				//map.addAttribute("password", user.getPassword());
 				return new ModelAndView("redirect:/profile/profileview");
 			}
 			else

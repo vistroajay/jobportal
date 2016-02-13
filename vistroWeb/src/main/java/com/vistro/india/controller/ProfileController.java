@@ -12,8 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.vistro.command.QualificationCommand;
+import com.vistro.india.bo.Certification;
 import com.vistro.india.bo.Profile;
+import com.vistro.india.bo.ProfileUpdate;
+import com.vistro.india.bo.Qualification;
+import com.vistro.india.bo.User;
 import com.vistro.india.service.IProfileService;
+import com.vistro.india.serviceimpl.ProfileService;
 @Controller
 @RequestMapping("/profile")
 public class ProfileController {
@@ -29,10 +35,22 @@ public class ProfileController {
 
 	}
 	@RequestMapping(value = "/profileview", method = RequestMethod.GET)
-	public ModelAndView userProfile(HttpServletRequest httpServletRequest, ModelMap modelMap) {
+	public ModelAndView userProfile(HttpServletRequest httpServletRequest, ModelMap modelMap,Certification certification) {
 		String EmailID = (String) httpServletRequest.getSession().getAttribute("EmailID");
 		
 		List<Profile> list = profileService.listof_UserSpecific_Info(EmailID);
+		
+		//certification starts here//
+		
+		List<Certification> list1=profileService.CertiFication(EmailID);
+		System.out.println("CertificationController"+list1);
+		modelMap.addAttribute("Certification", list1);
+		
+	 //Qualification starts here	//
+		List<Qualification> list2 = profileService.Qualifications(EmailID);
+		modelMap.addAttribute("Qualification", list2);
+		System.out.println("controller Qualification"+list2.get(0).getCourseName());
+    //personal Information starts here//
 		
 		modelMap.addAttribute("UserFirstName", list.get(0).getUserFirstName());
 		modelMap.addAttribute("UserLastName", list.get(0).getUserLastName());
@@ -59,13 +77,39 @@ public class ProfileController {
 	return new ModelAndView("profile");
 	}
 	
-	
+//	profile personal information update//
 	@RequestMapping(value="/profileUpdate",method = RequestMethod.POST)
-	public String profileUpdation(@ModelAttribute  Profile profile,ModelMap map){
-		int a = profileService.profileUpdation(profile);
+	public String profileUpdation(@ModelAttribute User user,ModelMap map){
+		int a = profileService.profileUpdation(user);
+		System.out.println(user.getLocation()+" "+user.getEmailID()+" "+user.getContactNumber1());
 		if(a==1){
 			return "welcome";
 		}
+		return "jobsearch";
+		
+
+	}
+	@RequestMapping(value="/profileUpdateQualification",method = RequestMethod.POST)
+	public String profileUpdationQualification(@ModelAttribute QualificationCommand command,ModelMap map,HttpServletRequest httpServletRequest){
+		String EmailID = (String) httpServletRequest.getSession().getAttribute("EmailID");
+		String[] CourseName=command.getCourseName();
+		for(String CourseNam:CourseName){
+			System.out.println(EmailID+CourseNam);
+		}
+		String[] UniversityName=command.getUniversityName();
+		for(String UniversityNam:UniversityName){
+			System.out.println(EmailID+UniversityNam);
+		}
+		String[] Yearofpassing=command.getYearofpassing();
+		for(String Yearofpassin:Yearofpassing){
+			System.out.println(EmailID+Yearofpassin);
+		}
+		String[] Specialisation=command.getSpecialisation();
+		for(String Specialisatio:Specialisation){
+			System.out.println(EmailID+Specialisatio);
+		}
+		System.out.println(command.getEmailID());
+		
 		return "jobsearch";
 		
 

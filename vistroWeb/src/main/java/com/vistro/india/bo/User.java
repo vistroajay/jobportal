@@ -2,8 +2,11 @@ package com.vistro.india.bo;
 
 public class User {
 	private String UserID ;
+	
 	private String UserFirstName;
+	
 	private String UserLastName;
+	
 	private String EmailID;
 	private String CompanyEmailID;
 	private int ProfileCompleteness;
@@ -36,6 +39,16 @@ public class User {
 	private String Gender;
 	private String Experience;
 	private String ResumeSummary;
+	private String Keyskills;
+	private String Qualification;
+	private String Specialisation;
+	private String Yearofpassing;
+	private String University;
+	private String Companyname;
+	private String Designation;
+	private String Role;
+	private String NoticePeriod;
+	
 	
 	
 	
@@ -250,6 +263,60 @@ public class User {
 	}
 	public void setResumeSummary(String resumeSummary) {
 		ResumeSummary = resumeSummary;
+	}
+	public String getKeyskills() {
+		return Keyskills;
+	}
+	public void setKeyskills(String keyskills) {
+		Keyskills = keyskills;
+	}
+	public String getQualification() {
+		return Qualification;
+	}
+	public void setQualification(String qualification) {
+		Qualification = qualification;
+	}
+	public String getSpecialisation() {
+		return Specialisation;
+	}
+	public void setSpecialisation(String specialisation) {
+		Specialisation = specialisation;
+	}
+	public String getYearofpassing() {
+		return Yearofpassing;
+	}
+	public void setYearofpassing(String yearofpassing) {
+		Yearofpassing = yearofpassing;
+	}
+	public String getUniversity() {
+		return University;
+	}
+	public void setUniversity(String university) {
+		University = university;
+	}
+	public String getCompanyname() {
+		return Companyname;
+	}
+	public void setCompanyname(String companyname) {
+		Companyname = companyname;
+	}
+	public String getDesignation() {
+		return Designation;
+	}
+	public void setDesignation(String designation) {
+		Designation = designation;
+	}
+	public String getRole() {
+		return Role;
+	}
+	public void setRole(String role) {
+		Role = role;
+	}
+	public String getNoticePeriod() {
+		return NoticePeriod;
+	}
+	public void setNoticePeriod(String noticePeriod) {
+		NoticePeriod = noticePeriod;
 	}
 
 

@@ -17,7 +17,7 @@ public class SearchService implements IJobSearchService{
 	public List jobSearch(JobSearch jobSearch) {
 		//JobSearch jobSearch=new JobSearch();
 		//System.out.println("service"+jobSearch.getSkillName()+""+jobSearch.getLocationName());
-		List<JobSearch> list=dbJobSearchDao.purchaseStock(jobSearch);
+		List<JobSearch> list=dbJobSearchDao.getJobList(jobSearch);
 		
 		return list;
 	}

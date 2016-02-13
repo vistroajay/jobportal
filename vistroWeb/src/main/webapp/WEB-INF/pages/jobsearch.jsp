@@ -11,6 +11,8 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jqueryvalidation.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/Validation.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
+    <link href="${pageContext.request.contextPath}/resources/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" type="text/css">
     <title>Vistro Jobs</title>
@@ -80,29 +82,160 @@ body {
  background-color: #E6E6FA;
 }
 </style>
+<script>
+
+$(document).ready(function() {
+	
+    var table=$('#jobsGrid').DataTable( {
+        //"ajax": "data/ajax.json",
+		"data": JSON.parse($('#jsonObj').html()),
+		//"data":[{"jobId":"1","jobName":"jaVa","jobDescription":"vistro","locationName":"bangalore","jobTypeName":"Full Time"},{"jobId":"2","jobName":"jaVa","jobDescription":"vistro","locationName":"bangalore","jobTypeName":"Part Time"},{"jobId":"3","jobName":"jaVa","jobDescription":"vistro","locationName":"bangalore","jobTypeName":"Part Time"},{"jobId":"4","jobName":"jaVa","jobDescription":"vistro","locationName":"bangalore","jobTypeName":"Part Time"},{"jobId":"5","jobName":"jaVa","jobDescription":"vistro","locationName":"bangalore","jobTypeName":"Part Time"}],
+        "columns": [
+            { "data": "jobName" },
+            { "data": "jobDescription" },
+            { "data": "locationName" },
+            { "data": "jobTypeName" } ,
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '<button>Apply Job</button>'
+            } 
+        ]
+    } );
+	 $('#jobsGrid tbody').on( 'click', 'button', function () {
+	 
+        var data = table.row( $(this).parents('tr') ).data();
+        alert( data.jobName);
+    } );
+
+} );
+</script>
   </head>
   <body>
 	<div id="wrapper"><!-- start main wrapper -->
 		<div id="header"><!-- start main header -->
 			<div class="top-line">&nbsp;</div>
-			<div class="top"><!-- top -->
-				<div class="container">
-					<div class="media-top-right">
-						<ul class="media-top clearfix">
-							<li class="item"><a href="" target="blank"><i class="fa fa-twitter"></i></a></li>
-							<li class="item"><a href="" target="blank"><i class="fa fa-facebook"></i></a></li>
-							<li class="item"><a href="" target="blank"><i class="fa fa-linkedin"></i></a></li>
-							<li class="item"><a href="" target="blank"><i class="fa fa-rss"></i></a></li>
-							<li class="item"><a href="" target="blank"><i class="fa fa-google-plus"></i></a></li>
-						</ul>
-						<ul class="media-top-2 clearfix">
-							<li><a href="" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
-							<li><a href="" class="btn btn-default btn-green btn-sm" >LOG IN</a></li>
-						</ul>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div><!-- top -->
+			    <div class="top"><!-- top -->
+            <div class="container">
+                <div class="container">
+                    <div class="media-top-left">
+                        <ul class="media-top clearfix">
+                            <li class="item"><a href="" target="blank"><i class="fa fa-twitter"></i></a></li>
+                            <li class="item"><a href="" target="blank"><i class="fa fa-facebook"></i></a></li>
+                            <li class="item"><a href="" target="blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="item"><a href="" target="blank"><i class="fa fa-rss"></i></a></li>
+                            <li class="item"><a href="" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                        <div class="media-top-right">
+                            <ul class="media-top clearfix">
+
+                                <li class="dropdown head-dpdn">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 3 new messages</h3>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">
+                                            <div class="user_img"><img src="images/1.png" alt=""></div>
+                                            <div class="notification_desc">
+                                                <p>Lorem ipsum dolor amet</p>
+                                                <p><span>1 hour ago</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a></li>
+                                        <li class="odd"><a href="#">
+                                            <div class="user_img"><img src="images/2.png" alt=""></div>
+                                            <div class="notification_desc">
+                                                <p>Lorem ipsum dolor amet </p>
+                                                <p><span>1 hour ago</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="user_img"><img src="images/3.png" alt=""></div>
+                                            <div class="notification_desc">
+                                                <p>Lorem ipsum dolor amet </p>
+                                                <p><span>1 hour ago</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a></li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all messages</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown head-dpdn">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 3 new notification</h3>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">
+                                            <div class="user_img"><img src="images/2.png" alt=""></div>
+                                            <div class="notification_desc">
+                                                <p>Lorem ipsum dolor amet</p>
+                                                <p><span>1 hour ago</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a></li>
+                                        <li class="odd"><a href="#">
+                                            <div class="user_img"><img src="images/1.png" alt=""></div>
+                                            <div class="notification_desc">
+                                                <p>Lorem ipsum dolor amet </p>
+                                                <p><span>1 hour ago</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="user_img"><img src="images/3.png" alt=""></div>
+                                            <div class="notification_desc">
+                                                <p>Lorem ipsum dolor amet </p>
+                                                <p><span>1 hour ago</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a></li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all notifications</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown profile_details_drop col-xs-4 col-lg-5">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <div class="profile_img">
+                                            <span class="prfil-img"><img src="images/a.png" alt=""> </span>
+                                            <div class="user-name">
+                                                <p>${UserFirstName}</p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu drp-mnu">
+                                        <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+                                        <li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
+                                        <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+
+                    <ul class="media-top-2 clearfix">
+                        <!--<li><a href="" class="btn btn-default btn-blue btn-sm">REGISTER</a></li>
+                        <li><a href="" class="btn btn-default btn-green btn-sm" >LOG IN</a></li>-->
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div><!-- top -->
 			<div class="container"><!-- container -->
 				<div class="row">
 					<div class="col-md-4"><!-- logo -->
@@ -158,19 +291,19 @@ body {
 					
 				</div>
 			</div><!-- end main-headline section -->
-
+<div id="jsonObj">${jobsearch}</div>
 			<div class="headline container"><!-- start headline section -->
-<form name="form" id="form" class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/jobsearch">
+<form name="form" id="form" class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/jobs/jobsearch">
 				<table><tr>
 
 					<div class="col-md-5 form-group group-1">
 						<label for="searchjob" class="label">Search</label>
-						<input type="text" id="SkillName" name="SkillName" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
+						<input type="text" id="jobName" name="jobName" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
 					</div>
-					<div class="col-md-3 form-group group-2">
+					<!-- <div class="col-md-3 form-group group-2">
 						<label for="searchplace" class="label">Location</label>
 						<input type="text" id="LocationName" name="LocationName" class="input-location" placeholder="New York, Hong Kong, New Delhi, Berlin etc.">
-					</div>
+					</div> -->
 <!-- 					<div class="col-md-2 form-group group-2"> -->
 <!-- 						<label for="Experience" class="label">Experience</label> -->
 <!-- 							<select id="experience" name="experience" class="input-experience"> -->
@@ -185,7 +318,7 @@ body {
 					
 					<div class="col-md-1 form-group group-3">
 						<label for="Search" class="label"></label>
-                    <button type="submit" id="Search" class="active btn btn-info btn-lg">
+                    <button type="submit" id="search" class="active btn btn-info btn-lg">
                         <i class="fa fa-search fa-fw"></i>Search</button></a>
 						</div>
                     		
@@ -201,158 +334,7 @@ body {
             <button type="button" class="close" data-dismiss="modal">×</button>
             <h4 class="modal-title">Login</h4>
           </div>
-  <div class="row">
-	    <div class="col-sm-1"></div>
-    <div class="col-sm-2" style="background-color:lavender;">
-	<div>
-                <div>
-<button type="button" class="btn btn-info" style="width:150px" width="100%" data-toggle="collapse" data-target="#loco">Location</button>
-  <div id="loco" class="collapse">
-                         <input type="checkbox" name="loc1" id="loc1"><label for="loc1">Bangalore</label><br></input>
-                         <input type="checkbox" name="loc2" id="loc2"><label for="loc2">Mumbai</label><br></input>
-                         <input type="checkbox" name="loc3" id="loc3"><label for="loc3">Delhi</label><br></input>
-                         <input type="checkbox" name="loc4" id="loc4"><label for="loc4">Chennai</label><br></input>
-                         <input type="checkbox" name="loc5" id="loc5"><label for="loc5">Hyderabad</label><br></input>
-</div>
-
-						<button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#comp">Top Companies</button>
-  <div id="comp" class="collapse">
-                         <input type="checkbox" name="loc1" id="comp1"><label for="comp1">Bangalore</label><br></input>
-                         <input type="checkbox" name="loc2" id="comp2"><label for="comp2">Mumbai</label><br></input>
-                         <input type="checkbox" name="loc3" id="comp3"><label for="comp3">Delhi</label><br></input>
-                         <input type="checkbox" name="loc4" id="comp4"><label for="comp4">Chennai</label><br></input>
-                         <input type="checkbox" name="loc5" id="comp5"><label for="comp5">Hyderabad</label><br></input>
-</div>
-						 <button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#ind">Industry</button>
-  <div id="ind" class="collapse">
-						 <input type="checkbox" name="loc1" id="ind1"><label for="ind1">Amazon</label><br></input>
-                         <input type="checkbox" name="loc2" id="ind2"><label for="ind2">Tcs</label><br></input>
-                         <input type="checkbox" name="loc3" id="ind3"><label for="ind3">CTS</label><br></input>
-                         <input type="checkbox" name="loc4" id="ind4"><label for="ind4">Amadeous</label><br></input>
-                         <input type="checkbox" name="loc5" id="ind5"><label for="ind5">J.P Morghan</label><br></input>
-
-</div>
-						<button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#sal">Salary</button>
-  <div id="sal" class="collapse">
-						 <input type="checkbox" name="loc1" id="sal1"><label for="sal1">0-3lakhs</label><br></input>
-                         <input type="checkbox" name="loc2" id="sal2"><label for="sal2">3-6lakhs</label><br></input>
-                         <input type="checkbox" name="loc3" id="sal3"><label for="sal3">6-12lakhs</label><br></input>
-                         <input type="checkbox" name="loc4" id="sal4"><label for="sal4">12-18lakhs</label><br></input>
-                         <input type="checkbox" name="loc5" id="sal5"><label for="sal5">18-22lakhs</label><br></input>
-
-</div>
-						<button type="button" class="btn btn-info" style="width:150px" data-toggle="collapse" data-target="#jt">Job Type</button>
-  <div id="jt" class="collapse">
-  						 <input type="checkbox" name="loc1" id="jt1"><label for="jt1">All jobs</label><br></input>
-                         <input type="checkbox" name="loc2" id="jt2"><label for="jt2">Engg</label><br></input>
-                         <input type="checkbox" name="loc3" id="jt3"><label for="jt3">Mba</label><br></input>
-                         <input type="checkbox" name="loc4" id="jt4"><label for="jt4">Govt</label><br></input>
-
-</div>			
-						<br>
-                </div>
-            </div>
-	
-	</div>
-    <div class="col-sm-6" style="background-color:white">
-		<div>
-                <div>
-                    <div class="row hvr">
-                        <div class="col-xs-12">
-<!--                             <div class="sidebar-content"> -->
-<!--                                 <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br> -->
-<!--                                 <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br> -->
-<!--                                 <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp; -->
-<!--                                 <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span> -->
-<!--                             </div> -->
-<!--                            <div class="demo1-content bg-alt"> -->
-<!--                                 <div class="row"> -->
-<!--                                     <div class="col-xs-12"> -->
-<!--                                         <div class="sidebar-content"> -->
-<!--                                              <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span> -->
-<!--                                         </div> -->
-<!--                                     </div> -->
-<!--                                 </div> -->
-<!--                              </div> -->
- <c:forEach items="${jobsearch}" var="m"> 
-    
-         ${m.JobName}
-        ${m.JobDescription}
-         ${m.LocationName}
-         ${m.SkillName}
-
-      </c:forEach> 
-
-                        </div>
-                    </div>
-                </div>
-                <div class="demo-content bg-alt">
-                    <div class="row hvr">
-                       <div class="col-xs-12">
-                            <div class="sidebar-content">
-                                <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br>
-                                <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br>
-                                <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp;
-                                <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span>
-                            </div>
-                            <div class="demo1-content bg-alt">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="sidebar-content">
-                                            <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="demo-content bg-alt">
-                    <div class="row hvr">
-                        <div class="col-xs-12">
-                            <div class="sidebar-content">
-                                <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br>
-                                <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br>
-                                <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp;
-                                <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span>
-                            </div>
-                            <div class="demo1-content bg-alt">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="sidebar-content">
-                                            <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="demo-content bg-alt">
-                    <div class="row hvr">
-                        <div class="col-xs-12">
-                            <div class="sidebar-content">
-                                <span itemprop="title" title="Openings for Software and Hardware Development  Profiles (0 -1 Year)" class="desig">Openings for Software and Hardware Development  Profiles (0 -1 Year)</span><br>
-                                <span itemprop="hiringOrganization" class="org">CRM Consultancy</span><br>
-                                <span itemprop="experienceRequirements" class="exp"><em></em>0-1 yrs</span> &nbsp;
-                                <span class="loc"><em></em><span itemprop="jobLocation">Bengaluru/Bangalore</span></span>
-                            </div>
-                            <div class="demo1-content bg-alt">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="sidebar-content">
-                                            <i class="fa fa-inr"></i> <span itemprop="baseSalary" class="salary  "><em></em>    1,50,000 - 2,00,000 P.A  </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-							 
-	</div>
-	</div>
+ 
 	</div>
 
 		
@@ -367,157 +349,17 @@ body {
 					<div class="col-md-8">
 						<h4><i class="glyphicon glyphicon-briefcase"></i> Recent Job</h4>
 						<div id="tab-container" class='tab-container'><!-- Start Tabs -->
-							<ul class='etabs clearfix'>
-								<li class='tab'><a href="#all">All</a></li>
-								<li class='tab'><a href="#contract">Contract</a></li>
-								<li class='tab'><a href="#full">Full Time</a></li>
-								<li class='tab'><a href="#free">Freelence</a></li>
-							</ul>
-							<div class='panel-container'>
-								<div id="all"><!-- Tabs section 1 -->
-								
-									<div class="recent-job-list-home"><!-- Tabs content -->
-										<div class="job-list-logo col-md-1 ">
-											<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
-										</div>
-										<div class="col-md-6 job-list-desc">
-											<h6>Store General Manager</h6>
-											<p>Similique sunt in culpa qui officia deserunt mollitia animi</p>
-										</div>
-										<div class="col-md-5 full">
-											<div class="row">
-												<div class="job-list-location col-md-7 ">
-													<h6><i class="fa fa-map-marker"></i>San Fransisco</h6>
-												</div>
-												<div class="job-list-type col-md-5 ">
-													<h6><i class="fa fa-user"></i>Full Time</h6>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div><!-- Tabs content -->
-									
-									<div class="recent-job-list-home"><!-- Tabs content -->
-										<div class="job-list-logo col-md-1 ">
-											<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
-										</div>
-										<div class="col-md-6 job-list-desc">
-											<h6>Department Head</h6>
-											<p>Similique sunt in culpa qui officia deserunt mollitia animi</p>
-										</div>
-										<div class="col-md-5 full">
-											<div class="row">
-												<div class="job-list-location col-md-7 ">
-													<h6><i class="fa fa-map-marker"></i>Denver</h6>
-												</div>
-												<div class="job-list-type col-md-5 ">
-													<h6><i class="fa fa-user"></i>Full Time</h6>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div><!-- Tabs content -->
-									
-									<div class="recent-job-list-home"><!-- Tabs content -->
-										<div class="job-list-logo col-md-1 ">
-											<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
-										</div>
-										<div class="col-md-6 job-list-desc">
-											<h6>Marketing</h6>
-											<p>Similique sunt in culpa qui officia deserunt mollitia animi</p>
-										</div>
-										<div class="col-md-5 full">
-											<div class="row">
-												<div class="job-list-location col-md-7 ">
-													<h6><i class="fa fa-map-marker"></i>Washington</h6>
-												</div>
-												<div class="job-list-type col-md-5 ">
-													<h6><i class="fa fa-user"></i>Part Time</h6>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div><!-- Tabs content -->
-									
-									<div class="recent-job-list-home"><!-- Tabs content -->
-										<div class="job-list-logo col-md-1 ">
-											<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
-										</div>
-										<div class="col-md-6 job-list-desc">
-											<h6>General Manager</h6>
-											<p>Similique sunt in culpa qui officia deserunt mollitia animi</p>
-										</div>
-										<div class="col-md-5 full">
-											<div class="row">
-												<div class="job-list-location col-md-7 ">
-													<h6><i class="fa fa-map-marker"></i>New York</h6>
-												</div>
-												<div class="job-list-type col-md-5 ">
-													<h6><i class="fa fa-user"></i>Full Time</h6>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div><!-- Tabs content -->
-									
-									<div class="recent-job-list-home"><!-- Tabs content -->
-										<div class="job-list-logo col-md-1 ">
-											<img src="images/upload/dummy-job-open-1.png" class="img-responsive" alt="dummy-joblist" />
-										</div>
-										<div class="col-md-6 job-list-desc">
-											<h6>Creative Designer</h6>
-											<p>Similique sunt in culpa qui officia deserunt mollitia animi</p>
-										</div>
-										<div class="col-md-5 full">
-											<div class="row">
-												<div class="job-list-location col-md-7 ">
-													<h6><i class="fa fa-map-marker"></i>Los Angeles</h6>
-												</div>
-												<div class="job-list-type col-md-5 ">
-													<h6><i class="fa fa-user"></i>Full Time</h6>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div><!-- Tabs content -->
-									
-									<div class="recent-job-list-home"><!-- Tabs content -->
-										<div class="job-list-logo col-md-1 ">
-											<img src="images/upload/dummy-job-open-2.png" class="img-responsive" alt="dummy-joblist" />
-										</div>
-										<div class="col-md-6 job-list-desc">
-											<h6>Finance Head</h6>
-											<p>Similique sunt in culpa qui officia deserunt mollitia animi</p>
-										</div>
-										<div class="col-md-5 full">
-											<div class="row">
-												<div class="job-list-location col-md-7 ">
-													<h6><i class="fa fa-map-marker"></i>Texas</h6>
-												</div>
-												<div class="job-list-type col-md-5 ">
-													<h6><i class="fa fa-user"></i>Full Time</h6>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div><!-- Tabs content -->
-									
-								</div><!-- Tabs section 1 -->
-								<div id="contract"><!-- Tabs section 2 -->
-									
-									
-								</div><!-- Tabs section 2 -->
-								<div id="full"><!-- Tabs section 3 -->
-
-									
-								</div><!-- Tabs section 3 -->
-								<div id="free"><!-- Tabs section 4 -->
-								
-									
-
-								</div><!-- Tabs section 4 -->
-						 
-							</div>
+                             <table id="jobsGrid" class="hover row-border" cellspacing="0" width="100%">
+						        <thead>
+						            <tr>
+						                <th>Job Name</th>
+						                <th>Job Description</th>
+						                <th>Location</th>
+						                <th>Job Type</th>
+						                <th>Action</th>
+						            </tr>
+						        </thead>
+						    </table>
 						</div><!-- end Tabs -->
 						<div class="spacer-2"></div>
 					</div>
@@ -692,190 +534,7 @@ body {
 				<div class="step-spacer"></div>
 			</div>
 		</div>
-		<div class="testimony">
-			<div class="container">
-				<h1>What People Say About Us</h1>
-				<p>
-					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas mo
-				</p>
-					
-			</div>
-			<div id="sync2" class="owl-carousel">
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				<div class="testimony-image">
-					<img src="images/upload/dummy-testimony.png" class="img-responsive" alt="summy-testimony" />
-				</div>
-				
-			</div>
-			
-			<div id="sync1" class="owl-carousel">
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum .
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum .
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum .
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum .
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia.
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum .
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum . At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum .
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.	
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-				<div class="testimony-content container">
-					<p>
-						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
-						
-					</p>
-					<p>
-						John Grasin, CEO, IT-Planet
-					</p>
-					<div class="media-testimony">
-						<a href="" target="blank"><i class="fa fa-twitter twit"></i></a>
-						<a href="" target="blank"><i class="fa fa-linkedin linkedin"></i></a>
-						<a href="" target="blank"><i class="fa fa-facebook fb"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
+
 		
 		<div id="company-post">
 			<div class="container">

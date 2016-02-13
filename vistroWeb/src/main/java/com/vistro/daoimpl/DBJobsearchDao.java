@@ -21,7 +21,7 @@ public class DBJobsearchDao implements IDBJobSearchDao{
 @Autowired
 JdbcTemplate jdbcTemplate;
 
-	public List<JobSearch> purchaseStock(JobSearch jobSearch) {
+	public List<JobSearch> getJobList(JobSearch jobSearch) {
 		
 	return jdbcTemplate.query(SignupSqlConstants.JOBSEARCH,new jobSearchExtractor());
 	
@@ -36,11 +36,11 @@ private class jobSearchExtractor implements ResultSetExtractor<List<JobSearch>>{
 //			jobSearch.setLocation(rs.getString(2));
 //			jobSearch.setExperience(rs.getString(3));
 //			jobSearch.setResult(rs.getString(4));
-			
-			jobSearch.setJobName(rs.getString(1));
-			jobSearch.setJobDescription(rs.getString(2));
-			jobSearch.setLocationName(rs.getString(3));
-			jobSearch.setSkillName(rs.getString(4));
+			jobSearch.setJobId(rs.getString(1));
+			jobSearch.setJobName(rs.getString(2));
+			jobSearch.setJobDescription(rs.getString(3));
+			jobSearch.setLocationName(rs.getString(4));
+			jobSearch.setJobTypeName(rs.getString(5));
 			
 			list.add(jobSearch);
 			
