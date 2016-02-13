@@ -106,7 +106,21 @@ $(document).ready(function() {
 	 $('#jobsGrid tbody').on( 'click', 'button', function () {
 	 
         var data = table.row( $(this).parents('tr') ).data();
-        alert( data.jobName);
+        
+        var jqxhr = $.ajax( "http://localhost:8080/vistroWeb/jobs/apply?jobID="+data.jobId )
+        .done(function(response) {
+        	if(response){
+        		alert( "Applied Job Successfully" );
+        	}
+        	else{
+        		alert( "Its seems some issue with your Login. Please contact Admin" );
+        	}
+          
+        })
+        .fail(function() {
+          alert( "It seems network is down. Please try after some time" );
+        })
+       
     } );
 
 } );

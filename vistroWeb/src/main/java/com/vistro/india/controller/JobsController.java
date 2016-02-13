@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.vistro.india.service.IJobSearchService;
 import com.google.gson.Gson;
@@ -42,10 +43,11 @@ public class JobsController {
 	}
 	
 	@RequestMapping(value="/apply",method = RequestMethod.GET)
+	@ResponseBody
 	public String JobSearch(@RequestParam("jobID") String jobID){
 		System.out.println(jobID);
 		
-		return "jobsearch";
+		return "true";
 	}
 
 }
