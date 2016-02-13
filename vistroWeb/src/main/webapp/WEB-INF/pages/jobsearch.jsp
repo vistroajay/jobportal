@@ -305,7 +305,7 @@ $(document).ready(function() {
 					
 				</div>
 			</div><!-- end main-headline section -->
-<div id="jsonObj">${jobsearch}</div>
+<div style="display: none;" id="jsonObj">${jobsearch}</div>
 			<div class="headline container"><!-- start headline section -->
 <form name="form" id="form" class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/jobs/jobsearch">
 				<table><tr>
