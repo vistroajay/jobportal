@@ -23,7 +23,7 @@ JdbcTemplate jdbcTemplate;
 
 	public List<JobSearch> getJobList(JobSearch jobSearch) {
 		
-	return jdbcTemplate.query(SignupSqlConstants.JOBSEARCH,new jobSearchExtractor());
+	return jdbcTemplate.query(SignupSqlConstants.JOBSEARCH+"'%"+jobSearch.getJobDescription()+"%'",new jobSearchExtractor());
 	
 }
 private class jobSearchExtractor implements ResultSetExtractor<List<JobSearch>>{

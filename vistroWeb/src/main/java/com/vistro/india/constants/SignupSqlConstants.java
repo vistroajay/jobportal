@@ -16,7 +16,7 @@ public static final String SQL_PROFILECertification2="SELECT  a.EmailID,b.Certif
 public static final String SQL_PROFILEUPDATE1="UPDATE user SET location=?,Dateofbirth=?,Keyskills=?,Experience=?,ContactNumber1=?,AddressLine1=?,ResumeSummary=?,ResumeDocumentURL=? WHERE EmailId=?";
 //public static final String SQL_PROFILEUPDATEQUALIFICATION="INSERT INTO curse values(?,?,?,?)"
 public static final String SQL_PROFILEQualification2="insert into userxuniversityxcourse (UniversityID,UserID,CourseID,Yearofpassing,specialisation) values ((select UniversityID from university where UniversityName=?),(select UserID from user where EmailID=?),(select CourseID from course where CourseName=?),?,?)";
-public static final String JOBSEARCH="select j.jobid,j.jobname,j.jobdescription,l.locationname,jt.jobtypename from jobs j, location l, jobtype jt where j.joblocationid=l.locationid and j.jobtypeid=jt.jobtypeid";
+public static final String JOBSEARCH="select j.jobid,j.jobname,j.jobdescription,l.locationname,jt.jobtypename from jobs j, location l, jobtype jt where j.joblocationid=l.locationid and j.jobtypeid=jt.jobtypeid and j.jobdescription like ";
 		
 }
 

@@ -312,7 +312,7 @@ $(document).ready(function() {
 
 					<div class="col-md-5 form-group group-1">
 						<label for="searchjob" class="label">Search</label>
-						<input type="text" id="jobName" name="jobName" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
+						<input type="text" id="jobDescription" name="jobDescription" class="input-job" placeholder="Keywords (IT Engineer, Shop Manager, Hr Manager...)">
 					</div>
 					<!-- <div class="col-md-3 form-group group-2">
 						<label for="searchplace" class="label">Location</label>

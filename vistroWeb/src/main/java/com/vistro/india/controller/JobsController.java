@@ -32,7 +32,7 @@ public class JobsController {
 	}
 	@RequestMapping(value="/jobsearch",method = RequestMethod.POST)
 	public String JobSearch(@ModelAttribute JobSearch jobSearch,ModelMap map){
-		System.out.println(jobSearch.getJobName());
+		System.out.println(jobSearch.getJobDescription());
 		List list=null;
 		list=jobSearchService.jobSearch(jobSearch);
 		Gson gson = new Gson();
